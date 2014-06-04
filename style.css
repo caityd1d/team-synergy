@@ -12,8 +12,8 @@ html
 body{
 	/*background-image: url('123.jpg');*/
 	
-	
 }
+
 header, footer, nav{ 
 	display:block;
 }
@@ -22,13 +22,9 @@ header{
 	margin-left: auto; 
 	margin-right: auto;
 	height: 80px;
-	/*width: 990px;*/
-	/*background-color: #8181F7;*/
-	/*margin-top: 10px;*/
-	/*border-radius: 15px 15px 0px 0px;*/
 	border: 15px 15px 0px 0px; 
 	background-color: rgba(169,245,242, 0.6);
-	
+
 }
 
 main{
@@ -38,9 +34,7 @@ main{
 	margin-bottom: 30px;
 	min-height: 400px;
 	margin-top: 1px;
-	
 	background-color: rgba(0,191,255,0.1);
-	
 	border: 0px 0px 15px 15px;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
 
@@ -133,11 +127,8 @@ text-align: center;
 	min-height: 300px;
 	width: 28%;
 	background-color: orange;
-/*	float: left;*/
 	display: inline-block;
-
-	
-	 border: 2px solid #000;
+	border: 2px solid #000;
    	border-radius: 13px;
     background-color: rgba(255,255,255, 0.3);
 
