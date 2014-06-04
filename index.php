@@ -26,6 +26,7 @@
 
 </header>
 
+
 <aside>
   <div class="aside">
 
@@ -33,7 +34,7 @@
     <li>
         <input type="radio" id="slide1" name="slide" checked>
         <label for="slide1"></label>
-        <img src="1.jpg">
+        <img src="1234.jpg">
     </li>
     <li>
         <input type="radio" id="slide2" name="slide" checked>
@@ -43,7 +44,7 @@
     <li>
         <input type="radio" id="slide3" name="slide" checked>
         <label for="slide3"></label>
-        <img src="1234.jpg">
+        <img src="1.jpg">
     </li>
     <li>
         <input type="radio" id="slide4" name="slide" checked>
@@ -91,6 +92,8 @@
 </div>
   
 </main>
+
+
 
 
 
