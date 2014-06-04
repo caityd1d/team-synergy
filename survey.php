@@ -1,7 +1,22 @@
 <?php
+<<<<<<< HEAD
 
-include('db.php');
 
+    error_reporting(E_ALL);
+    ini_set('display_errors', 'on');
+
+    include('db.php');
+    $db = new DB();
+
+    $sql = "
+        SELECT * 
+        FROM Reviews
+    ";
+
+    $results = $db->execute($sql);
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        print_r($_POST);
+    };
 ?>
 
 <html>
@@ -41,9 +56,13 @@ include('db.php');
             Morale: <input type="range" name="morale" class="priorities"><br>
             Communication: <input type="range" name="communication" class="priorities"><br>
 
-            </form>
-
-        </body>
-</html>
+=======
 
 
+
+
+
+<<<<<<< HEAD
+
+=======
+>>>>>>> aa55238467989d7c1bd2e127256c894da96c6392

@@ -28,7 +28,7 @@
 
 <main>
 	
-
+<a href="survey.php"><h1>Go To The Survey</h1></a>
 
 </main>
 
