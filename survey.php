@@ -69,6 +69,9 @@
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="communication" class="ranger"><p class="count" style="display: inline"></p>
                 <br>
                 <button type="submit">Submit</button>
+                
+                <input type="hidden" value="1" name="userid">
+                <input type="hidden" value="1" name="companyid">
             </fieldset>
         </form>
     </body>
