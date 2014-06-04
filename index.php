@@ -15,7 +15,7 @@
       <div id="menubar">
           <ul id="nav">
             <li class="current"><a href="index.html">Home</a></li>
-            <li><a href="ourwork.html">Our Work</a></li>
+            <li><a href="ourwork.html">About Us</a></li>
             <li><a href="testimonials.html">Testimonials</a></li>
           
             <li><a href="contact.html">Contact Us</a></li>
