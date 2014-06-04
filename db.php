@@ -54,7 +54,7 @@ class DB {
 
         // Create INSERT statement
         $sql =  "INSERT INTO `{$table_name}` (`" . implode('`, `', array_keys($sql_values)) . "`) VALUES (" . implode(', ', $sql_values) . ")";
-        return $this->execute($sql, $database);
+        return $this->execute($sql);
     }
 
 }
