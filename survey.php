@@ -1,3 +1,17 @@
+<?php
+    include('db.php');
+    $db = new DB();
+
+    $sql = "
+        SELECT * 
+        FROM Reviews
+    ";
+
+    $results = $db->execute($sql);
+    
+?>
+
+
 <html>
     <body>
         <header></header>
@@ -18,13 +32,3 @@
         </body>
 </html>
 
-
-<?php
-
-
-
-
-
-
-
-?>

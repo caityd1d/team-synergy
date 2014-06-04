@@ -11,7 +11,7 @@ class DB {
     public function __construct() {
 
         // Connect to the database
-        $this->link = new mysqli('68.178.143.149', 'teamsynergy', 'teamsynergy', 'Bootcamp!1');
+        $this->link = new mysqli('68.178.143.149', 'teamsynergy', 'Bootcamp!1', 'teamsynergy');
 
         // If the connection had problem, output that now
         if ($this->link->connect_errno) {
