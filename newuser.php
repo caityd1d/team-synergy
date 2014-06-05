@@ -8,13 +8,25 @@
 
     include('db.php');
     $db = new DB();
-
-    
+    $emailreg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+/';
+    $passreg = '/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/'
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $sql_values = $_POST;
-        print_r($sql_values);
-        $table = "People"; 
-        $db->insert($table, $sql_values);
+        //Check email against REGEX
+        if (preg_match($emailreg, $_POST['email']) === 1)
+        //Check that email is unique
+        if 
+        //Check that passwords match
+        if ($_POST['password'] !== $_POST['verifypassword'])
+        //Check password has 8chars and at least 1 number and one symbol
+        if (preg_match($passreg, $_POST['password']) === 1)
+        //Drop second password field
+        unset($_POST['verifypassword']);
+
+
+        // $sql_values = $_POST;
+        // print_r($sql_values);
+        // $table = "People"; 
+        // $db->insert($table, $sql_values);
     }
 ?>
 
