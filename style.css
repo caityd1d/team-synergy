@@ -11,6 +11,7 @@ html
 }
 body{
 	/*background-image: url('123.jpg');*/
+	background-image: url("169.png");
 	
 }
 
@@ -23,7 +24,7 @@ header{
 	margin-right: auto;
 	height: 80px;
 	border: 15px 15px 0px 0px; 
-	background-color: rgba(169,245,242, 0.6);
+	background-color: rgba(5,5,197, 0.6);
 
 }
 
@@ -37,6 +38,7 @@ main{
 	background-color: rgba(0,191,255,0.1);
 	border: 0px 0px 15px 15px;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
+	/*background-image: url("169.png");*/
 
 }
 footer{
@@ -50,7 +52,7 @@ footer{
 	background: (#43A9FF, #0043A8);
 	border: 15px 15px 15px 15px;
 	box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;
-	background-color: rgba(169,245,242, 0.3);
+	background-color: rgba(5,5,197, 0.6);
 	border: 2px solid #000;
 	
 
@@ -109,7 +111,9 @@ ul#nav li.current a, ul#nav li:hover a
 	overflow: hidden;
 	margin: auto;
 	border: 2px solid #000;
-	background-color: rgba(169,245,242, 0.3);
+	background-color: rgba(5,5,197, 0.3);
+	/*background-image: url("169.png");*/
+
 	
 }
 
@@ -130,7 +134,7 @@ text-align: center;
 	display: inline-block;
 	border: 2px solid #000;
    	border-radius: 13px;
-    background-color: rgba(255,255,255, 0.3);
+    background-color: rgba(5,5,197, 0.6);
 
 }
 
@@ -154,7 +158,7 @@ text-align: center;
 .slider img {
     height: 25em;
     width: 76.50em;
-    vertical-align: top;
+   vertical-align: top;
     opacity: 0;
     transition: .25s;
     visibility: hidden;
