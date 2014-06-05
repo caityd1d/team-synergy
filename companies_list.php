@@ -28,16 +28,10 @@
     <div class="Products">
     
       <div class="{{name}}">
-       <!-- <img class="view" src={{thumbnail}} alt="item"> -->
         <div class="name">{{name}}</div>
         <div class="industry">{{industry}}</div>
-
         <a href="{{website}}"> {{website}} </a><br><br><hr style="border: 1px solid #000;" />
-        <!--
-        <div class="description">Description: {{description}}</div>
-        <div class="price">${{price}}</div>
-        <button class="addItem">Add to Cart</button> 
-        -->
+
       </div>
       </div>
     {{/each}}
