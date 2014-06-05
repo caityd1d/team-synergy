@@ -66,7 +66,7 @@
                 <label for='communication'>Communication</label>
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="Communication" class="ranger"><p class="count" style="display: inline"></p>
                 <br>
-                <textarea cols="50" rows="10" spellcheck='true' name='ReviewText'>Tell us about your employer</textarea><br>
+                <textarea cols="50" rows="10" spellcheck='true' name='ReviewText' placeholder='Tell us about your employer'></textarea><br>
 
                 <button type="submit">Submit</button>
                 
