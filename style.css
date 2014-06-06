@@ -1,14 +1,15 @@
+*
+{ 
+    margin: 0;
+    padding: 0;
+}
+
 html
 { 
 	height: 100%;
 	
 }
 
-*
-{ 
-	margin: 0;
-	padding: 0;
-}
 body{
 	/*background-image: url('123.jpg');*/
 	background-image: url("169.png");
@@ -130,6 +131,7 @@ ul#nav
 #project {
 margin: 0 90px;
 text-align: center;
+overflow: hidden;
 
 }
 
@@ -140,8 +142,9 @@ text-align: center;
 	margin: 20px;
 	min-height: 300px;
 	width: 28%;
+    float: left;
 	background-color: orange;
-	display: inline-block;
+	display: block;
 	border: 2px solid #000;
    	border-radius: 13px;
     background-color: rgba(5,5,197, 0.6);

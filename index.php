@@ -63,6 +63,10 @@
             
               <div id="prospects projDiv">
                 <h2>Prospects</h2>
+                <form action="testpayload.php" method="GET">
+                  <input type="text" name="search" placeholder="Find a company rating" size="40"><br>
+                  <button type="submit">Submit</button>
+                </form>
                 
               </div>
             
