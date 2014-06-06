@@ -1,0 +1,54 @@
+.companies {
+  overflow: hidden;
+}
+.listing {
+  list-style-type: none;
+  float: left;
+}
+.listing li {
+  margin: 2px;
+}
+
+.listing h4 {
+  margin-top: 0;
+}
+
+.listing div img {
+  height: 100px;
+  width: 100px;
+  float: left;
+  display: block;
+  margin:5px;
+}
+
+.content {
+  background-color: #C3CCC6;
+  margin: 5px;
+  text-align: center;
+  
+}
+
+.listing div {
+  border: 1px solid black;
+  margin: 5px;
+  float: left;
+  background-color: #C3CCC6;
+  list-style-type: none;
+  
+
+}
+.listing div .outer::before, .listing div .outer::after {
+    content: " ";
+    display: table;
+}
+
+.listing div .outer::after {
+  clear:both;
+}
+
+.listing div .outer {
+  background-color: #C3CCC6;
+  margin:3px;
+  border: 1px solid #7A7F7C;
+  /*float: left;*/
+}
