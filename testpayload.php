@@ -28,10 +28,12 @@ while($row = $results->fetch_assoc()){
     $a['Logo'] = $row['Logo'];
     array_push(Payload::$values, $a);
  }   
+    
     $payload = json_encode(Payload::$values);
-    print_r(Payload::$values);
 
+    print_r(Payload::$values);
 ?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,29 +42,32 @@ while($row = $results->fetch_assoc()){
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
     <script> var payload = <?php echo "$payload";?></script>
     <script src="render.js"></script>
+    <link rel="stylesheet" type="text/css" href="companies.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+
      <form action="testpayload.php" method="GET">
         <input type="text" name="search" placeholder="Find a company rating" size="75"><br>
         <button type="submit">Submit</button>
     </form>
-    <ul class="listing">
-        
-    </ul>
-
+   
+    <div class="companies">
+        <ul class="listing"></ul>
+    </div>
 
     <script id="company-media-object" type="text/x-handlebars-template">
         {{#each this}}
-            <li id="{{@key}}">
-              <div class="outer">
-                <img src="{{logo}}">
-                <div class="content">
-                  <h4>{{Name}}</h4>
-                  <p>{{Industry}}</p>
-                  <a href="{{Website}}">Company Website</a>
-                </div>
-              </div>
-            </li>
+                <li>
+                  <div class="outer">
+                    <img src="{{Logo}}">
+                    <div class="content">
+                      <h4>{{Name}}</h4>
+                      <p>{{Industry}}</p>
+                      <a href="{{Website}}">{{Name}}'s website</a>
+                    </div>
+                  </div>
+                </li>
         {{/each}}
     </script>
 </body>

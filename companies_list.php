@@ -21,7 +21,7 @@
 
 <main>
 	
-	 <div class="masterCat">
+	<div class="masterCat">
 
   <script id="catalog" type="text/x-hendalbars-template">
   {{#each this}}
@@ -31,10 +31,9 @@
         <div class="name">{{name}}</div>
         <div class="industry">{{industry}}</div>
         <a href="{{website}}"> {{website}} </a><br><br><hr style="border: 1px solid #000;" />
-
       </div>
-      </div>
-    {{/each}}
+    </div>
+  {{/each}}
 
       
 
