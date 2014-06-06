@@ -78,7 +78,7 @@ ul#nav li
 	background: transparent;
 }
 
-ul#nav li a
+ul#nav li .link
 { 
 	float: left;
 	font: bold 130% 'PacificoRegular', Arial, sans-serif;
@@ -93,6 +93,14 @@ ul#nav li a
 	color: #FFF;
 	text-decoration: none;
 } 
+
+ul#nav li .login{
+	float: right;
+	color: white;
+	padding-top: 5px;
+	padding-right: 10px;
+
+}
 	
 ul#nav li.current a, ul#nav li:hover a
 { 
@@ -101,6 +109,8 @@ ul#nav li.current a, ul#nav li:hover a
 	background: (#2E2E2E, #848484);
 	text-shadow: none;
 }
+
+ul#nav
 
 .main
 {
@@ -138,91 +148,80 @@ text-align: center;
 
 }
 
-.aside{
+aside{
 	width: auto;
 	height: 400px;
 	 border: 2px solid #000;
     background-color: rgba(255,255,255, 0.3);
 
 }
-.slider {
-    height: 15em;
-    left: 50%;
-    
-}
 
-.slider li {
-    list-style: none;
-    position: absolute;
+.futurico-theme.slider-wrapper {
+    position: relative;
+    width: auto;
+    height: 390px;
+    margin: 0;
+    padding: 5px;
+ 
+    background: #141517;
+ 
+   
 }
-.slider img {
-    height: 25em;
-    width: 76.50em;
-   vertical-align: top;
-    opacity: 0;
-    transition: .25s;
-    visibility: hidden;
+ .futurico-theme .nivoSlider {
+    position: relative;
+    width: auto;
+    height: 390px;
 }
-.slider input {
+ 
+.futurico-theme .nivoSlider img {
     display: none;
-}
-.slider label {
-    background-color: #111;
-    bottom: .5em;
-    cursor: pointer;
-    display: block;
-    height: .5em;
     position: absolute;
-    width: .5em;
-    z-index: 10;
+    width: auto;
+    height: 390px;
+    top: 0;
+    left: 0;
 }
 
+.futurico-theme .nivo-controlNav {
+    position: absolute;
+    bottom: -30px;
+    left: 105px;
 
-.slider li:nth-child(1) label {
-    left: .5em;
 }
 
-.slider li:nth-child(2) label {
-    left: 2em;
+.futurico-theme .nivo-controlNav a {
+    display: block;
+    float: left;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    text-indent: -9999px;
+   
+ 
+    background: #141517;
+ 
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+ 
+    -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0, .5), 0px 1px 1px rgba(255,255,255, .05);
+    -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0, .5), 0px 1px 1px rgba(255,255,255, .05);
+    box-shadow: inset 0px 1px 1px rgba(0,0,0, .5), 0px 1px 1px rgba(255,255,255, .05);
 }
 
-.slider li:nth-child(3) label {
-    left: 3.5em;
-}
+.futurico-theme .nivo-controlNav a.active,
+.futurico-theme .nivo-caption span {
+    background: #a5cd4e;
+    background: -moz-linear-gradient(top,  #a5cd4e 0%, #6b8f1a 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a5cd4e), color-stop(100%,#6b8f1a));
+    background: -webkit-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
+    background: -o-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
+    background: -ms-linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
+    background: linear-gradient(top,  #a5cd4e 0%,#6b8f1a 100%);
+ 
+    -webkit-box-shadow: inset 0px 1px 1px rgba(255,255,255, .4), 0px 1px 1px rgba(0,0,0, .3);
+    -moz-box-shadow: inset 0px 1px 1px rgba(255,255,255, .4), 0px 1px 1px rgba(0,0,0, .3);
+    box-shadow: inset 0px 1px 1px rgba(255,255,255, .4), 0px 1px 1px rgba(0,0,0, .3);
 
-.slider li:nth-child(4) label {
-    left: 5em;
 }
-
-.slider li input:checked ~ img {
-    opacity: 1;
-    visibility: visible;
-    z-index: 10;
-}
-
-.slider:hover label {
-    opacity: 1;
-    visibility: visible;
-}
-
-.slider input:checked + label {
-    background-color: #fff;
-}
-
-.slider:hover li:nth-child(1) label {
-    left: .5em;
-}
-
-.slider:hover li:nth-child(2) label {
-    left: 2em;
-}
-
-.slider:hover li:nth-child(3) label {
-    left: 3.5em;
-}
-
-.slider:hover li:nth-child(4) label {
-    left: 5em;
-}
-
 
