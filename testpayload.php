@@ -7,7 +7,7 @@ include 'payload.php';
 
 $db = new DB;
 $search = $_GET['search'];
-print_r($search);
+
 
 if ($search===''){
     $sql = "SELECT * FROM Companies";
@@ -31,7 +31,7 @@ while($row = $results->fetch_assoc()){
     
     $payload = json_encode(Payload::$values);
 
-    print_r(Payload::$values);
+    
 ?>
 
 <!DOCTYPE html>
@@ -42,8 +42,9 @@ while($row = $results->fetch_assoc()){
     <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
     <script> var payload = <?php echo "$payload";?></script>
     <script src="render.js"></script>
+    <link rel="stylesheet" type="text/css" href="company.css">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <link rel="stylesheet" type="text/css" href="companies.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 
