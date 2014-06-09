@@ -27,8 +27,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
         $error_string = 'Please create an account. Your email was not found, or you type poorly. Do better.';
     } else {
         if ($results['email']='$email'){
-            // if (password_verify($_POST['password'], $results['$password'])){
-            if ($password == $results['password']){
+            if (password_verify($_POST['password'], $results['password'])){
+            // if ($password == $results['password']){
                 $logged_in = true;
             } else {
                 $error_string = 'Sorry, bad password. Stop sucking.';

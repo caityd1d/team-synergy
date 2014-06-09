@@ -5,6 +5,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $password = password_hash($_POST['password'], PASSWORD_DEFAULT);
     $sql_values = $_POST;
     $sql_values['password'] = $password;
+    print_r($_POST['password']);
     print_r($sql_values);
     print_r(array_keys($sql_values));
 
