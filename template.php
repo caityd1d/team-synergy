@@ -27,11 +27,11 @@
 It is a long established fact that a reader will be distracted by the readable content of a page 
 
  
-             </p>
-            <p></p> 
-            <div class="hyperlink">
+                </p>
+                <p></p> 
+                <div class="hyperlink">
                 <a href="#" class="link">website</a>
-            </div> 
+                </div> 
             </div>
         </div>
     </aside>
@@ -39,6 +39,24 @@ It is a long established fact that a reader will be distracted by the readable c
 
 <section>
 ratings go here
+
+<ul class="rating1">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<ul class="rating2">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<ul class="rating3">
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
 </section>
 
 
