@@ -37,13 +37,13 @@
  
     <div id="slider" class="nivoSlider">
   
-        <img src="slide1.png">
+        <img src="img/slide1.png" alt="">
  
-        <img src="slide2.png">
+        <img src="img/slide2.png" alt="">
  
-        <img src="slide5.png">
+        <img src="img/slide5.png" alt="">
  
-        <img src="slide4.png">
+        <img src="img/slide4.png" alt="">
  
     </div>
  
@@ -97,7 +97,7 @@
 </footer>
 
 
-  <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
  
   <script src="jquery.nivo.slider.pack.js"></script>
   <script src="slide.js"></script>
