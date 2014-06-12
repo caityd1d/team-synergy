@@ -30,11 +30,11 @@
  
     <div id="slider" class="slides">
   
-        <img src="img/slide1.png" alt="">
+        <img src="img/slide1.jpg" alt="">
  
-        <img src="img/slide2.png" alt="">
+        <img src="img/slide2.jpg" alt="">
  
-        <img src="img/slide5.png" alt="">
+        <img src="img/slide5.jpg" alt="">
  
         <img src="img/slide4.png" alt="">
  
@@ -45,11 +45,11 @@
 
   
 <div class="main">
-  <div id="project">
+  <div id="featured">
 
 
             
-              <div id="prospects projDiv">
+              <div id="prospects">
                 <h2>Prospects</h2>
                 <form action="testpayload.php" method="GET">
                   <input type="text" name="search" placeholder="Find a company rating" size="40"><br>
@@ -60,13 +60,13 @@
             
 
             
-              <div id="employers projDiv">
+              <div id="employers">
                 <h2>Employers</h2>
                 
               </div>
             
 
-              <div id="employee projDiv">
+              <div id="employees">
                 <h2>Employee</h2>
                 </div>
 
