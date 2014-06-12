@@ -39,7 +39,7 @@ ul#nav li
     background: transparent;
 }
 
-ul#nav li .link
+nav .link
 { 
     float: left;
     font: bold 130% 'PacificoRegular', Arial, sans-serif;
@@ -63,7 +63,7 @@ ul#nav li .login{
 
 }
     
-ul#nav li.current a, ul#nav li:hover a
+nav a:hover;
 { 
     color: #000;
     background: #BDBDBD;
