@@ -4,6 +4,8 @@
 
   <link rel="stylesheet" href="nivo-slider.css" media="screen">
   <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Inside Job | What It's REALLY Like on the Inside </title>
  
 </head>
 
@@ -13,29 +15,20 @@
 
 
 <header>
-  
-
-   <nav>
-      <div id="menubar">
-          <ul id="nav">
-            <li class="current"><a href="index.html" class="link">Home</a></li>
-            <li><a href="ourwork.html" class="link">Companies</a></li>
-            <li><a href="contact.html" class="link">Contact Us</a></li>
-            <li><a href="newuser.php" class="login">Log In</a></li>
-          </ul>
-        </div>
-      </nav>
-
-
+  <nav>
+            <a href="index.html" class="link">Home</a>
+            <a href="ourwork.html" class="link">Companies</a>
+            <a href="contact.html" class="link">Contact Us</a>
+            <a href="newuser.php" class="login">Log In</a>
+  </nav>
 </header>
 
 
-<aside>
  
 
 <div class="slider-wrapper futurico-theme">
  
-    <div id="slider" class="nivoSlider">
+    <div id="slider" class="slides">
   
         <img src="slide1.png">
  
@@ -50,11 +43,6 @@
 </div>
 
 
-  
-</aside>
-
-
-<main>
   
 <div class="main">
   <div id="project">
@@ -85,23 +73,20 @@
   </div>
 </div>
   
-</main>
 
 
 
 
 
 <footer>
-  
-
 </footer>
 
-
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
- 
   <script src="jquery.nivo.slider.pack.js"></script>
   <script src="slide.js"></script>
 </body>
 </html>
+
+
 
  
