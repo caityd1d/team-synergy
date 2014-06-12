@@ -1,6 +1,6 @@
 <?php 
     
-    function getAverages($company_id){
+    // function getAverages($company_id){
         require 'db.php';
         $db = new DB;
         $a = 0;
