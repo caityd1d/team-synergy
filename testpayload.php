@@ -26,6 +26,7 @@ while($row = $results->fetch_assoc()){
     $a['Industry'] = $row['Industry'];
     $a['Website'] = $row['Website'];
     $a['Logo'] = $row['Logo'];
+    $a['Id'] = $row['company_id'];
     array_push(Payload::$values, $a);
  }   
     
@@ -59,9 +60,9 @@ while($row = $results->fetch_assoc()){
 
     <script id="company-media-object" type="text/x-handlebars-template">
         {{#each this}}
-                <li>
+                <li class="{{Id}}">
                   <div class="outer">
-                    <img src="{{Logo}}">
+                    <a href="template.php?company_id={{Id}}"><img src="{{Logo}}"></a>
                     <div class="content">
                       <h4>{{Name}}</h4>
                       <p>{{Industry}}</p>

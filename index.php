@@ -30,13 +30,13 @@
  
     <div id="slider" class="slides">
   
-        <img src="slide1.png">
+        <img src="img/slide1.png" alt="">
  
-        <img src="slide2.png">
+        <img src="img/slide2.png" alt="">
  
-        <img src="slide5.png">
+        <img src="img/slide5.png" alt="">
  
-        <img src="slide4.png">
+        <img src="img/slide4.png" alt="">
  
     </div>
  
