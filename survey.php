@@ -2,8 +2,8 @@
 
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
-
-    include('db.php');
+    include_once 'db.php';
+    include 'header.php';
     $db = new DB();
 
     
@@ -71,7 +71,7 @@
 
                 <button type="submit">Submit</button>
                 
-                <input type="hidden" value="1" name="person_id">
+                <input type="hidden" value="$_SESSION['user_id']" name="person_id">
                 <input type="hidden" value="1" name="company_id">
             </fieldset>
         </form>
