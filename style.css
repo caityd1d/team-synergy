@@ -9,7 +9,7 @@
 
 
 body{
-    background-color: #C6D4E1;  
+    background-color: #F6F6E2;  
     max-width: 1200px;
     margin: auto; 
 }
@@ -24,18 +24,18 @@ header{
     margin: auto;
     height: 50px;
     border: 15px 15px 0px 0px; 
-    background-color: #44749D;
+    background-color: #04033D;
 }
 
 
 .title h1{
     margin-left: 50px;
-    color: #44749D;
+    color: #04033D;
 }
 
 .title h3 {
     margin-left: 50px;
-    color: #44749D;
+    color: #04033D;
 }
 
 /*-------- End header ----------*/

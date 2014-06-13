@@ -20,6 +20,7 @@
         <header>
             <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
             <script src="main.js"></script>
+            <link rel="stylesheet" href="style.css">
         </header>
             <form action="survey.php" method="POST">
 
