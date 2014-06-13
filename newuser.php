@@ -6,7 +6,7 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
 
-    include('db.php');
+    include_once('db.php');
     $db = new DB();
     $emailreg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+/';
     $passreg = '/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/'
@@ -34,11 +34,12 @@
 <html>
 <head>
     <title>New User</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 
 <body>
-
+    <?php include 'header.php';?>
     <form action="newuser.php" method="POST">
         <fieldset> 
             <input type="text" placeholder="First" name="first_name">First Name<p></p>

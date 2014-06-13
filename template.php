@@ -4,7 +4,7 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
 
-    include('db.php');
+    include_once('db.php');
     // include('getaverages.php');
 
     $db = new DB();
@@ -29,18 +29,17 @@
 <html lang="en">
 <head>
 
-  <link rel="stylesheet" href="nivo-slider.css" media="screen">
   <link rel="stylesheet" href="template.css"> 
+  <link rel="stylesheet" href="style.css">
  
 </head>
 
 <body>
 
-<header>
+<?php include 'header.php';?>
 
 <?php echo $company_info['Name']; ?>
 	
-</header>
 
 <main>
     <aside> 

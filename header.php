@@ -1,3 +1,4 @@
+
 <?php
 
 
@@ -22,15 +23,14 @@ if (is_numeric($_SESSION['user_id'])){
 
 ?>
 
-
-
-
-<!DOCTYPE html>
 <html>
+
 <head>
     
 </head>
     <body>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 <div class="title">
     <h1>Inside Job</h1>
@@ -40,12 +40,13 @@ if (is_numeric($_SESSION['user_id'])){
 
 <header>
   <nav>
-            <a href="index.html" class="link">Home</a>
-            <a href="ourwork.html" class="link">Companies</a>
+            <a href="index.php" class="link">Home</a>
+            <a href="companies.php" class="link">Companies</a>
             <a href="contact.html" class="link">Contact Us</a>
             <a href="newuser.php" class="login">Log In</a>
   </nav>
 </header>
+
 
     </body>
 </html>

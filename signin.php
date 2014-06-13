@@ -1,8 +1,11 @@
 <?php 
   
 
+
   include("initialize.php");
   
+  $db = new DB;
+
 
   $sql = "SELECT * from 'people' WHERE 'email' = $_POST['email'];"
   $error_array = array();
@@ -49,3 +52,10 @@ if(count($error_array) > 0) {
 }
 
 ?>
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<?php include 'header.php';?>
+</html>
