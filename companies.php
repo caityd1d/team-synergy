@@ -4,7 +4,7 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
 
-    include('db.php');
+    include_once('db.php');
     $db = new DB();
 
     
@@ -20,6 +20,7 @@
 <html>
 <head>
     <title>Companies</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 

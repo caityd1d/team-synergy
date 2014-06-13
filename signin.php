@@ -2,7 +2,7 @@
     error_reporting(E_ALL);
   ini_set('display_errors', 'on');
   
-  include "db.php";
+  include_once "db.php";
   $db = new DB;
 
   $sql = "SELECT * from 'people' WHERE 'email' = $_POST['email'];"
@@ -44,3 +44,9 @@ if(count($error_array) > 0) {
 }
 
 ?>
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+</html>
