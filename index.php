@@ -4,6 +4,7 @@
 
   <link rel="stylesheet" href="nivo-slider.css" media="screen">
   <link rel="stylesheet" href="style.css">
+  <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
   <meta charset="UTF-8">
   <title>Inside Job | What It's REALLY Like on the Inside </title>
  
