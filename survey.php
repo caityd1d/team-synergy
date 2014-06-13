@@ -4,6 +4,7 @@
     ini_set('display_errors', 'on');
     include_once 'db.php';
     include 'header.php';
+
     $db = new DB();
 
     
