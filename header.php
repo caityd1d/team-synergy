@@ -1,9 +1,8 @@
 
 <?php
 
-$user_ID = true;
 
-if ($logged_in){
+if (is_numeric($_SESSION['user_id'])){
     echo "<div class='welcome'>
           <p>Hello
             <a href='#'class='userName'>$email</a> Not 
@@ -26,6 +25,13 @@ if ($logged_in){
 
 <html>
 
+<head>
+    
+</head>
+    <body>
+
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
 <div class="title">
     <h1>Inside Job</h1>
     <h3>What It's REALLY Like on the Inside</h3>
@@ -41,4 +47,6 @@ if ($logged_in){
   </nav>
 </header>
 
+
+    </body>
 </html>
