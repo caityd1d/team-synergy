@@ -25,7 +25,7 @@ if ($logged_in){
 ?>
 
 <html>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+
 <div class="title">
     <h1>Inside Job</h1>
     <h3>What It's REALLY Like on the Inside</h3>
