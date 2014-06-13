@@ -1,48 +1,75 @@
-<!-- add validation to this page you lazy bastards -->
-<?php
-
+<?php 
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
 
-    include_once('db.php');
-    $db = new DB();
+include_once 'db.php';
+include 'payload.php';
+
+$db = new DB;
+$search = $_GET['search'];
+
+
+if ($search===''){
+    $sql = "SELECT * FROM Companies";
+} else {
+    $sql = "SELECT * FROM Companies WHERE Name LIKE '%$search%'";
+
+}
+
+$results = $db->execute($sql);
+
+Payload::$values = [];
+
+while($row = $results->fetch_assoc()){
+    $a = [];
+    $a['Name'] = $row['Name'];
+    $a['Industry'] = $row['Industry'];
+    $a['Website'] = $row['Website'];
+    $a['Logo'] = $row['Logo'];
+    $a['Id'] = $row['company_id'];
+    array_push(Payload::$values, $a);
+ }   
+    
+    $payload = json_encode(Payload::$values);
 
     
-    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $sql_values = $_POST;
-        print_r($sql_values);
-        $table = "Companies"; 
-        $db->insert($table, $sql_values);
-    }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Companies</title>
+    <title>Company List</title>
+    <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script> var payload = <?php echo "$payload";?></script>
+    <script src="render.js"></script>
+    <link rel="stylesheet" type="text/css" href="company.css">
+    <link rel="stylesheet" type="text/css" href="companies.css">
     <link rel="stylesheet" href="style.css">
 </head>
-
-
 <body>
-
-    <form action="companies.php" method="POST">
-        <fieldset> 
-        <input type="text" placeholder="name" name="Name">Company<p></p>
-        <input type="text" placeholder="industry" name="Industry">Industry<p></p>
-        <input type="text" placeholder="website" name="Website">Website<p></p>
+    <?php include 'header.php';?>
+     <form action="testpayload.php" method="GET">
+        <input type="text" name="search" placeholder="Find a company rating" size="75"><br>
         <button type="submit">Submit</button>
-        <button class="cancel">Cancel</button>
-
-
-        </fieldset>
     </form>
+   
+    <div class="companies">
+        <ul class="listing"></ul>
+    </div>
+
+    <script id="company-media-object" type="text/x-handlebars-template">
+        {{#each this}}
+                <li class="{{Id}}">
+                  <div class="outer">
+                    <a href="template.php?company_id={{Id}}"><img src="{{Logo}}"></a>
+                    <div class="content">
+                      <h4>{{Name}}</h4>
+                      <p>{{Industry}}</p>
+                      <a href="{{Website}}">{{Name}}'s website</a>
+                    </div>
+                  </div>
+                </li>
+        {{/each}}
+    </script>
 </body>
 </html>
-
-
-
-
-
-
-

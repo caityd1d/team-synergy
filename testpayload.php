@@ -49,7 +49,7 @@ while($row = $results->fetch_assoc()){
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <?php include 'header.php';?>
      <form action="testpayload.php" method="GET">
         <input type="text" name="search" placeholder="Find a company rating" size="75"><br>
         <button type="submit">Submit</button>

@@ -39,7 +39,7 @@
 
 
 <body>
-
+    <?php include 'header.php';?>
     <form action="newuser.php" method="POST">
         <fieldset> 
             <input type="text" placeholder="First" name="first_name">First Name<p></p>
