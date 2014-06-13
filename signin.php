@@ -49,4 +49,5 @@ if(count($error_array) > 0) {
 <head>
 <link rel="stylesheet" href="style.css">
 </head>
+<?php include 'header.php';?>
 </html>

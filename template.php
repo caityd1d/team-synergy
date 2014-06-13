@@ -36,11 +36,10 @@
 
 <body>
 
-<header>
+<?php include 'header.php';?>
 
 <?php echo $company_info['Name']; ?>
 	
-</header>
 
 <main>
     <aside> 
