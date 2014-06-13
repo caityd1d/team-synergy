@@ -2,10 +2,11 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
-echo "monkey cat";
-// include 'initialize.php';
+// echo "monkey cat";
+include 'initialize.php';
 
-
+session_start();
+print_r($_SESSION);
 $db = new DB;
 
 $email = '';
@@ -21,14 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $results_ok = $results->num_rows;
     $results = $results ->fetch_assoc();
     
-
     if ($results_ok == 0){
         $error_string = 'Please create an account. Your email was not found, or you type poorly. Do better.';
     } else {
-        if ($results['email']=='$email'){
-            if (password_verify($_POST['password'], $results['password']){
+        if ($results['email']== $email){
+            if (password_verify($_POST['password'], $results['password'])){
+                // echo "A hit, a palpable hit";
                 $_SESSION['user_id'] = $results['person_id'];
-                header('Location: account.php');
+                $_SESSION['email'] = $results['email'];
+                header("Location: account.php");
                 exit();
             } else {
                 $error_string = 'Sorry, bad password. Stop sucking.';
@@ -37,4 +39,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     }
 }
-  ?>
+?>
