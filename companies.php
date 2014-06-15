@@ -40,7 +40,9 @@ while($row = $results->fetch_assoc()){
 <head>
     <title>Company List</title>
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.2/handlebars.min.js"></script>
     <script> var payload = <?php echo "$payload";?></script>
+    <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
     <script src="render.js"></script>
     <link rel="stylesheet" type="text/css" href="company.css">
     <link rel="stylesheet" type="text/css" href="companies.css">
@@ -49,7 +51,7 @@ while($row = $results->fetch_assoc()){
 <body>
     <?php include 'header.php';?>
      <form action="testpayload.php" method="GET">
-        <input type="text" name="search" placeholder="Find a company rating" size="75"><br>
+        <input type="text" name="search" placeholder="Find a company rating" size="75">
         <button type="submit">Submit</button>
     </form>
    
