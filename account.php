@@ -11,6 +11,4 @@ if (!is_numeric($_SESSION['user_id'])) {
 
 echo 'You\'re logged in ' . $_SESSION['email'];
 
-// FOR DEBUGGING DELETE BEFORE USING
-// session_destroy();
 ?>

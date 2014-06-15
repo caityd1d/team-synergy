@@ -2,11 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 'on');
 
-// echo "monkey cat";
 include 'initialize.php';
 
-session_start();
-print_r($_SESSION);
 $db = new DB;
 
 $email = '';
