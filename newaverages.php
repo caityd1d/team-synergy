@@ -1,11 +1,11 @@
 <?php 
 function getAverages($company_id){
-    require 'db.php';
+    include 'initialize.php';
     $db = new DB;
     $sql = "SELECT * FROM Reviews WHERE company_id = $company_id";
     $results = $db->execute($sql);
     $count = $results->num_rows;
-    $keys = ['WLBalance', 'Salary', 'Benefits', 'Opportunity', 'Fairness', 'Leadership', 'Loyalty', 'Morale', 'Communicaiton'];
+    $keys = ['WLBalance', 'Salary', 'Benefits', 'Opportunity', 'Fairness', 'Leadership', 'Loyalty', 'Morale', 'Communication'];
     $scores = [];
     $superaverage = 0;
 
@@ -35,11 +35,11 @@ function getAverages($company_id){
     $superaverage /= count($keys);
     $superaverage = substr($superaverage, 0, 4);
     $scores['Average'] = $superaverage;
-    print_r($scores);
+    // print_r($scores);
     return($scores);
 }
 
 $scores = getAverages(1);
 
-print_r($scores);
+// print_r($scores);
 ?>

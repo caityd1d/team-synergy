@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     font-family: 'Francois One', sans-serif;
-
+    border-radius: 10px;
 }
 
 
@@ -23,20 +23,19 @@ header, footer, nav{
 header{
     margin: auto;
     height: 50px;
-    border: 15px 15px 0px 0px; 
     background-color: #04033D;
 }
 
-
-.title h1{
-    margin-left: 50px;
+.clearfix {
+    clear:all;
+}
+.title{
+    padding-left: 50px;
     color: #04033D;
+    background-color: #969F85;
+
 }
 
-.title h3 {
-    margin-left: 50px;
-    color: #04033D;
-}
 
 /*-------- End header ----------*/
 
@@ -47,7 +46,6 @@ header{
     margin-bottom: 30px;
     min-height: 400px;
     margin-top: 1px;
-    border: 0px 0px 15px 15px;
 }
 
 footer{
@@ -56,13 +54,11 @@ footer{
     margin-bottom: 20px;
     padding-top: 25px;
     padding-bottom: 20px;
-    border: 2px solid #000;
 }
 
 nav{
     margin-left: auto; 
     margin-right: auto;
-    border: 15px 15px 0px 0px; 
     font-size: 1.5em;
     
 
@@ -75,7 +71,6 @@ nav .login{
     padding: 0px 50px 10px 0px;
     background: transparent; 
     border-radius: 10px;
-    border: 10px;
     text-align: center;
     color: #FFF;
     text-decoration: none;
@@ -90,7 +85,6 @@ nav .link
     padding: 0px 20px 10px 20px;
     background: transparent; 
     border-radius: 10px;
-    border: 10px;
     text-align: center;
     color: #FFF;
     text-decoration: none;
@@ -112,17 +106,47 @@ nav a:hover;
     text-shadow: none;
 }*/
 
+.userButton {
+    float:right;
+    padding-top: 20px;
+    padding-right: 20px;
+}
 
+button {
+    background-color: #253D56;
+    color:#FFF;
+    height: 30px;
+    width: 60px;
+    border-radius: 10px;
+}
+
+.top-form {
+    margin: 10px 0;
+    margin-left: auto;
+
+}
+
+.top-form button {
+    height: 30px;
+    width: 60px;
+    border-radius: 10px;
+    position: absolute;
+    margin-left: 10px;
+}
+
+.top-box{
+    height: 30px;
+    width: 600px;
+    font-size: 1.5em;
+}
 
 .main
 {
 
     padding: 15px;
-    border: solid 2px black;
     margin-top: 10px;
     overflow: hidden;
-    margin: auto;
-    border: 2px solid #000;    
+    margin: auto;   
 }
 
 
@@ -144,16 +168,7 @@ overflow: hidden;
     float: left;
     background-color:;
     display: block;
-    border: 2px solid #000;
     border-radius: 10px;
-}
-
-aside{
-    width: auto;
-    height: 400px;
-     border: 2px solid #000;
-    /*background-color: rgba(255,255,255, 0.3);*/
-
 }
 
 
@@ -187,9 +202,9 @@ aside{
 }
 
 .futurico-theme .nivo-controlNav {
-    position: absolute;
-    bottom: -130px;
-    left: 105px;
+    position: relative;
+    padding-left: 550px;
+    bottom: 0px;
 
 }
 

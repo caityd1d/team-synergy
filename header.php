@@ -1,12 +1,13 @@
 
 <?php
 
+$email = $_SESSION['email'];
 
 if (is_numeric($_SESSION['user_id'])){
     echo "<div class='welcome'>
           <p>Hello
-            <a href='#'class='userName'>$email</a> Not 
-            <a href='#'class='nonUser'>$email</a>?
+            <a href='account.php'class='userName'>$email</a> Not 
+            <a href='account.php'class='nonUser'>$email</a>?
             <button class='signOut'>Sign Out</button>
           </p>
         </div>";
@@ -43,7 +44,7 @@ if (is_numeric($_SESSION['user_id'])){
             <a href="index.php" class="link">Home</a>
             <a href="companies.php" class="link">Companies</a>
             <a href="contact.html" class="link">Contact Us</a>
-            <a href="newuser.php" class="login">Log In</a>
+            <a href="signform.php" class="login">Log In</a>
   </nav>
 </header>
 

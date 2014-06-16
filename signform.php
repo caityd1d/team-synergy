@@ -1,6 +1,8 @@
+<?php 
+include 'initialize.php';
+ ?>
 
-
-  <!doctype html>
+  <!DOCTYPE html>
   <html lang="en">
   <head>
       <meta charset="UTF-8">
@@ -14,7 +16,7 @@
         <button type = "submit">Submit</button>
     </form>
 
-    <p class = "error"> <?php echo $error_string ?> </p>
+     <!-- <p class = "error"> <?php echo $error_string ?> </p> -->
 
   </body>
   </html>
