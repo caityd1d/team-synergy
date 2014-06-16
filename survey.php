@@ -8,6 +8,7 @@
 
     $sql = "SELECT * FROM Companies";
     $results = $db->execute($sql);
+    $user = $_SESSION['user_id'];
 
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if (!$_SESSION){
@@ -20,7 +21,7 @@
         $sql_values = $_POST;
         print_r($sql_values);
         $table = "Reviews"; 
-        // $db->insert($table, $sql_values);
+        $db->insert($table, $sql_values);
     }
 ?>
 
@@ -44,6 +45,7 @@
                     echo "<option value=\"" . $row['company_id'] . "\">" . $row['Name'] . "</option>";};
                 ?>
                 </select><br>
+                
                 <label for='balance'>Work/Life Balance</label>
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="WLBalance" class="ranger"><p class="count" style="display: inline"></p>
                 <datalist id='balance'>
@@ -88,8 +90,7 @@
 
                 <button type="submit">Submit</button>
                 
-                <input type="hidden" value="$_SESSION['user_id']" name="person_id">
-                <input type="hidden" class="company_name" value="" name="company_id">
+                <input type="hidden" value=<?php echo "$user" ?>; name="person_id">
             </fieldset>
         </form>
     </body>
