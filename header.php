@@ -10,8 +10,9 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 <div class="title">
-    <h1>Inside Job</h1>
-    <h3>What It's REALLY Like on the Inside</h3>
+  <a class="logo" href="index.php"><img src="img/company-logo/inside-job.png"></a>
+  <h1>Inside Job</h1>
+  <h3>What It's REALLY Like on the Inside</h3>
 
     <div class="signed-in">
       <?php

@@ -7,7 +7,7 @@ $(function(){
 
     $('body').on('click', '.signOut', function(){
        
-        window.location = 'http://jon.com/Team-Synergy-Team/logout.php';
+        window.location = '/Team-Synergy-Team/logout.php';
 
     });
     
