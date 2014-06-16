@@ -1,31 +1,27 @@
 <?php
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 'on');
+    // error_reporting(E_ALL);
+    // ini_set('display_errors', 'on');
     include 'initialize.php';
 
     $db = new DB();
-
+    session_start();
     $sql = "SELECT * FROM Companies";
     $results = $db->execute($sql);
-    $user = $_SESSION['user_id'];
-
+    print_r($_SESSION['user_id']);
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (!$_SESSION){
+        if (isset($_SESSION['user_id'])){
             header("Location: signform.php");
             die("You must be logged in to create reviews.");
         }
-        while($row = $results->fetch_assoc()){
-
-        }
         $sql_values = $_POST;
-        print_r($sql_values);
+        // print_r($sql_values);
         $table = "Reviews"; 
         $db->insert($table, $sql_values);
     }
 ?>
 
-<html>
+<!-- <html>
 
     <head>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
@@ -90,9 +86,9 @@
 
                 <button type="submit">Submit</button>
                 
-                <input type="hidden" value=<?php echo "$user" ?>; name="person_id">
+                <input type="hidden" value=<?php echo "$_SESSION[user_id]";?> name="person_id">
             </fieldset>
         </form>
     </body>
-</html>
+</html> -->
 
