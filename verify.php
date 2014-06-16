@@ -10,6 +10,7 @@ $email = '';
 $error_string = '';
 $password = '';
 
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     //is this an email address
     $email = $_POST['email'];
