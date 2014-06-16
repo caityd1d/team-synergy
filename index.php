@@ -2,14 +2,6 @@
 
 include 'initialize.php';
 
-
-
-
-
-
-
-
-
 ?>
 
 
