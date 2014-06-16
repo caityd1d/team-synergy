@@ -2,17 +2,25 @@
 
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
-    include_once 'db.php';
-    include 'header.php';
+    include 'initialize.php';
 
     $db = new DB();
 
-    
+    $sql = "SELECT * FROM Companies";
+    $results = $db->execute($sql);
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (!$_SESSION){
+            header("Location: signform.php");
+            die("You must be logged in to create reviews.");
+        }
+        while($row = $results->fetch_assoc()){
+
+        }
         $sql_values = $_POST;
         print_r($sql_values);
         $table = "Reviews"; 
-        $db->insert($table, $sql_values);
+        // $db->insert($table, $sql_values);
     }
 ?>
 
@@ -31,6 +39,9 @@
 
             <fieldset>
                 <legend>Rate Your Employer</legend>
+                <select class="employer" name="employer"><?php while($row = $results->fetch_assoc()){
+                    echo "<option value='$row[\'company_id\']'>" . $row['Name'] . "</option>";
+                };?></select><br>
                 <label for='balance'>Work/Life Balance</label>
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="WLBalance" class="ranger"><p class="count" style="display: inline"></p>
                 <datalist id='balance'>
@@ -76,7 +87,7 @@
                 <button type="submit">Submit</button>
                 
                 <input type="hidden" value="$_SESSION['user_id']" name="person_id">
-                <input type="hidden" value="1" name="company_id">
+                <input type="hidden" class="company_name" value="" name="company_id">
             </fieldset>
         </form>
     </body>
