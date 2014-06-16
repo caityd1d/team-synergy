@@ -9,10 +9,11 @@ include 'initialize.php';
       <title>Sign in Form</title>
   </head>
   <body>
-
-    <form action = "verify.php" method = "POST">  
-        <input type = "text" name = "email">
-        <input type = "password" name = "password">
+    <?php include 'header.php';?>
+    <h3>Please log in to continue</h3>
+    <form action = "verify.php" method = "POST">  <br>
+        Email <input type = "text" name = "email"><br><br>
+        Password <input type = "password" name = "password"><br><br>
         <button type = "submit">Submit</button>
     </form>
 

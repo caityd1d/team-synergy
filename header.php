@@ -1,7 +1,11 @@
 
 <html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
 
-     <body>
+    <link rel="stylesheet" href="style.css">
+</head>    
+<body>
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
@@ -42,7 +46,7 @@
             <a href="index.php" class="link">Home</a>
             <a href="companies.php" class="link">Companies</a>
             <a href="contact.html" class="link">Contact Us</a>
-            <a href="signform.php" class="login">Log In</a>
+            <a href="login.php" class="login">Log In</a>
   </nav>
 </header>
 
