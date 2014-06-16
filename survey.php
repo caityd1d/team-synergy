@@ -46,7 +46,7 @@
                 ?>
                 </select><br>
                 
-                <label for='balance'>Work/Life Balance</label>
+                <label for='balance'>Work/Life Balance</label> <br> 
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="WLBalance" class="ranger"><p class="count" style="display: inline"></p>
                 <datalist id='balance'>
                 <option>0</option>
@@ -61,31 +61,31 @@
                 <option>9</option>
                 <option>10</option>
                 </datalist>
-                <br>        
-                <label for='salary'>Salary</label>
+                <br> <br>        
+                <label for='salary'>Salary</label> <br> 
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="Salary" class="ranger"><p class="count" style="display: inline"></p>
-                <br>        
-                <label for='benefits'>Benefits</label>
+                <br> <br>        
+                <label for='benefits'>Benefits</label><br> 
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="Benefits" class="ranger"><p class="count" style="display: inline"></p>
-                <br>
-                <label for='advancement'>Advancement Opportunities</label>
+                <br><br> 
+                <label for='advancement'>Advancement Opportunities</label><br> 
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="Opportunity" class="ranger"><p class="count" style="display: inline"></p>
-                <br>
-                <label for='equality'>Fairness/Equality</label>
+                <br><br> 
+                <label for='equality'>Fairness/Equality</label><br> 
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="Fairness" class="ranger"><p class="count" style="display: inline"></p>
-                <br>
-                <label for='leadership'>Quality of Leadership</label>
+                <br><br> 
+                <label for='leadership'>Quality of Leadership</label><br>
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="Leadership" class="ranger"><p class="count" style="display: inline"></p>
-                <br>
-                <label for='loyalty'>Loyalty</label>
+                <br><br> 
+                <label for='loyalty'>Loyalty</label><br> 
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="Loyalty" class="ranger"><p class="count" style="display: inline"></p>
-                <br>
-                <label for='morale'>Morale</label>
+                <br><br> 
+                <label for='morale'>Morale</label><br> 
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="Morale" class="ranger"><p class="count" style="display: inline"></p>
-                <br>
-                <label for='communication'>Communication</label>
+                <br><br> 
+                <label for='communication'>Communication</label><br> 
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="Communication" class="ranger"><p class="count" style="display: inline"></p>
-                <br>
+                <br><br> 
                 <textarea cols="50" rows="10" spellcheck='true' name='ReviewText' placeholder='Tell us about your employer'></textarea><br>
 
                 <button type="submit">Submit</button>
