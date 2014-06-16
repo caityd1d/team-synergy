@@ -2,7 +2,7 @@
     error_reporting(E_ALL);
     ini_set('display_errors', 'on');
 
-include 'db.php';
+include_once 'db.php';
 include 'payload.php';
 
 $db = new DB;
@@ -46,9 +46,10 @@ while($row = $results->fetch_assoc()){
     <link rel="stylesheet" type="text/css" href="company.css">
     <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
     <link rel="stylesheet" type="text/css" href="companies.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+    <?php include 'header.php';?>
      <form action="testpayload.php" method="GET">
         <input type="text" name="search" placeholder="Find a company rating" size="75"><br>
         <button type="submit">Submit</button>

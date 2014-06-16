@@ -4,4 +4,5 @@ $(function(){
         var value = $(this).val();
         $(this).next().text(value);
     });
+
 });

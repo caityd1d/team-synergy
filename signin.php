@@ -1,9 +1,11 @@
 <?php 
-    error_reporting(E_ALL);
-  ini_set('display_errors', 'on');
   
-  include "db.php";
+
+
+  include("initialize.php");
+  
   $db = new DB;
+
 
   $sql = "SELECT * from 'people' WHERE 'email' = $_POST['email'];"
   $error_array = array();
@@ -25,8 +27,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     if ($result['email'] == $_POST['email']){
       if ($result['password'] == $_POST['password']){
         // loggedIn()
-        array_push($error_array, "Congratulations you are logged in as $email");
-        $loggedIn = true; // says found in DB by email & entered correct pswd.
+        //array_push($error_array, "Congratulations you are logged in as $email");
+        //$loggedIn = true; // says found in DB by email & entered correct pswd.
+
+        $_SESSION['user_id'] = 87923;
+        header('Location: account.php');
+        exit();
+
+
       }else {
         // badPw();
         array_push($error_array, "Sorry your password is incorrect");
@@ -44,3 +52,10 @@ if(count($error_array) > 0) {
 }
 
 ?>
+
+<html>
+<head>
+<link rel="stylesheet" href="style.css">
+</head>
+<?php include 'header.php';?>
+</html>

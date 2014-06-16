@@ -1,3 +1,18 @@
+<?php
+
+include 'initialize.php';
+
+
+
+
+
+
+
+
+
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -14,7 +29,14 @@
 
 
 <?php include 'header.php';?>
- 
+
+<div class="top-form">
+  <form action="companies.php" method="GET">
+  <input type="text" name="search" class="top-box" placeholder="Find a company rating" size="80">
+  <button type="submit">Submit</button>
+  </form>
+</div>
+
 
 <div class="slider-wrapper futurico-theme">
  
@@ -33,13 +55,15 @@
     </div>
  
 </div>
- 
+
+<div class="clearfix"><br></div>
+  
 <div class="main">
   <div class="featured">
 
               <div class="prospects">
                 <h2>Prospects</h2>
-                <form action="testpayload.php" method="GET">
+                <form action="companies.php" method="GET">
                   <input type="text" name="search" placeholder="Find a company rating" size="40"><br>
                   <button type="submit">Submit</button>
                 </form>
