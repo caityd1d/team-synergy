@@ -39,9 +39,11 @@
 
             <fieldset>
                 <legend>Rate Your Employer</legend>
-                <select class="employer" name="employer"><?php while($row = $results->fetch_assoc()){
-                    echo "<option value='$row[\'company_id\']'>" . $row['Name'] . "</option>";
-                };?></select><br>
+                <select class="employer" name="company_id">
+                <?php while($row = $results->fetch_assoc()){
+                    echo "<option value=\"" . $row['company_id'] . "\">" . $row['Name'] . "</option>";};
+                ?>
+                </select><br>
                 <label for='balance'>Work/Life Balance</label>
                 <input type=range min=0 max=10 value=0 step=1 list='balance' name="WLBalance" class="ranger"><p class="count" style="display: inline"></p>
                 <datalist id='balance'>
