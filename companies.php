@@ -6,7 +6,7 @@ include_once 'db.php';
 include 'payload.php';
 
 $db = new DB;
-$search = $_GET['search'];
+$search = (isset($_GET['search']) ? $_GET['search'] : null);
 
 
 if ($search===''){
@@ -50,7 +50,7 @@ while($row = $results->fetch_assoc()){
 </head>
 <body>
     <?php include 'header.php';?>
-     <form action="testpayload.php" method="GET">
+     <form action="companies.php" method="GET">
         <input type="text" name="search" placeholder="Find a company rating" size="75">
         <button type="submit">Submit</button>
     </form>

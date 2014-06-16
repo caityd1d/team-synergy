@@ -30,7 +30,7 @@ main{
     
     height: 250px;
     width: auto;
-    background-color: green;
+    background-color: 969F85;
     padding: 10px;
 
     /*box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 5px;*/
@@ -70,7 +70,7 @@ img {
     width: 150px;
     float: left;
     border-radius: 7px;
-    background-color: blue;
+    background-color: white;
     border: 1px solid black;
 
 }

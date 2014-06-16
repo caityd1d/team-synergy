@@ -1,14 +1,10 @@
 <?php 
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+
+
 
 include 'initialize.php';
 
-$db = new DB;
 
-$email = '';
-$error_string = '';
-$password = '';
 
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -37,3 +33,4 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 }
 ?>
+
