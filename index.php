@@ -33,15 +33,11 @@
     </div>
  
 </div>
-
-
-  
+ 
 <div class="main">
-  <div id="featured">
+  <div class="featured">
 
-
-            
-              <div id="prospects">
+              <div class="prospects">
                 <h2>Prospects</h2>
                 <form action="testpayload.php" method="GET">
                   <input type="text" name="search" placeholder="Find a company rating" size="40"><br>
@@ -50,32 +46,26 @@
                 
               </div>
             
-
-            
-              <div id="employers">
+              <div class="employers">
                 <h2>Employers</h2>
                 
               </div>
             
-
-              <div id="employees">
+              <div class="employees">
                 <h2>Employee</h2>
                 </div>
 
   </div>
+
 </div>
-  
-
-
-
-
-
+ 
 <footer>
 </footer>
 
   <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
   <script src="jquery.nivo.slider.pack.js"></script>
   <script src="slide.js"></script>
+
 </body>
 </html>
 

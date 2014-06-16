@@ -6,8 +6,6 @@
 
 }
 
-
-
 body{
     background-color: #C6D4E1;  
     max-width: 1200px;
@@ -64,8 +62,7 @@ nav{
     margin-right: auto;
     border: 15px 15px 0px 0px; 
     font-size: 1.5em;
-    
-
+  
 } 
 
 nav .login{
@@ -112,11 +109,8 @@ nav a:hover;
     text-shadow: none;
 }*/
 
-
-
 .main
 {
-
     padding: 15px;
     border: solid 2px black;
     margin-top: 10px;
@@ -125,8 +119,7 @@ nav a:hover;
     border: 2px solid #000;    
 }
 
-
-#featured {
+.featured {
 margin: auto;
 padding: 0 50px;
 text-align: center;
@@ -134,18 +127,67 @@ overflow: hidden;
 
 }
 
- #featured div
+ .featured div 
 {
-    
-    
     margin: 20px;
     min-height: 300px;
     width: 300px;
     float: left;
-    background-color:;
     display: block;
     border: 2px solid #000;
     border-radius: 10px;
+    background-color: rgba(255,255,255, 0.2);
+   
+}
+
+.prospects{
+     position: relative;
+}
+
+.prospects:after{
+    content: "";
+  background: url(img/box5.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
+}
+
+.employers
+{
+    position: relative; 
+}
+
+.employers:after{
+    content: "";
+  background: url(img/box.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
+}
+
+.employees
+{ 
+    position: relative;
+}
+
+.employees:after{
+    content: "";
+  background: url(img/box4.jpg);
+  opacity: 0.5;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;  
 }
 
 aside{
@@ -153,10 +195,7 @@ aside{
     height: 400px;
      border: 2px solid #000;
     /*background-color: rgba(255,255,255, 0.3);*/
-
 }
-
-
 
 /*----------Slider CSS Below------------------*/
 
@@ -165,10 +204,8 @@ aside{
     width: auto;
     height: 390px;
     margin: 0;
-    padding: 5px;
- 
+    padding: 5px; 
     background: #141517;
- 
    
 }
  .futurico-theme .slides {
@@ -200,14 +237,10 @@ aside{
     height: 16px;
     margin-right: 5px;
     text-indent: -9999px;
-   
- 
     background: #141517;
- 
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
- 
     -webkit-box-shadow: inset 0px 1px 1px rgba(0,0,0, .5), 0px 1px 1px rgba(255,255,255, .05);
     -moz-box-shadow: inset 0px 1px 1px rgba(0,0,0, .5), 0px 1px 1px rgba(255,255,255, .05);
     box-shadow: inset 0px 1px 1px rgba(0,0,0, .5), 0px 1px 1px rgba(255,255,255, .05);
@@ -228,4 +261,3 @@ aside{
     box-shadow: inset 0px 1px 1px rgba(255,255,255, .4), 0px 1px 1px rgba(0,0,0, .3);
 
 }
-
