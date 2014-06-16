@@ -54,7 +54,7 @@
   <nav>
             <a href="index.php" class="link">Home</a>
             <a href="companies.php" class="link">Companies</a>
-            <a href="contact.html" class="link">Contact Us</a>
+            <a href="survey.php" class="link">Rate Your Employer</a>
 
             <div id="container">
                 <div id="loginContainer">

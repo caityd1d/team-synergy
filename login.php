@@ -16,6 +16,9 @@ include 'initialize.php';
         Password <input type = "password" name = "password"><br><br>
         <button type = "submit">Submit</button>
     </form>
+<br><br>
+    <h3>New user? <button onclick="window.location.href='signup.php'">Sign up!</button></h3>
+  
 
      <!-- <p class = "error"> <?php echo $error_string ?> </p> -->
 
