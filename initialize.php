@@ -1,8 +1,8 @@
 <?php
 
 // Errors
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
 
 // Database
 include_once('db.php');

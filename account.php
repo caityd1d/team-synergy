@@ -9,8 +9,6 @@ if (!is_numeric($_SESSION['user_id'])) {
     die('You need to log in');
 } 
 
-echo 'You\'re logged in ' . $_SESSION['email'];
-
 ?>
 
 <!doctype html>
@@ -24,7 +22,7 @@ echo 'You\'re logged in ' . $_SESSION['email'];
 <body>
 
     <?php include 'header.php';?>
-    
+    <?php echo 'You\'re logged in ' . $_SESSION['email']; ?>
 </body>
 
 

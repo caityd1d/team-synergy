@@ -1,8 +1,17 @@
 
 <html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+
 
      <body>
 <meta charset="utf8">
+
+    <link rel="stylesheet" href="style.css">
+</head>    
+<body>
+
+
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="login.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
@@ -45,6 +54,7 @@
             <a href="index.php" class="link">Home</a>
             <a href="companies.php" class="link">Companies</a>
             <a href="contact.html" class="link">Contact Us</a>
+
             <div id="container">
                 <div id="loginContainer">
                     <a href="#" id="loginButton"><span>Login</span><em></em></a>
@@ -69,6 +79,9 @@
                 </div>
             </div>
                 <!-- Login Ends Here -->
+
+            <a href="login.php" class="login">Log In</a>
+
   </nav>
 </header>
 

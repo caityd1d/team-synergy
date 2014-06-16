@@ -5,4 +5,10 @@ $(function(){
         $(this).next().text(value);
     });
 
+    $('body').on('click', '.signOut', function(){
+       
+        window.location = 'http://jon.com/Team-Synergy-Team/logout.php';
+
+    });
+    
 });
