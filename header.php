@@ -1,10 +1,7 @@
 
 <html>
 
-<head>
-    
-</head>
-    <body>
+     <body>
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
@@ -15,8 +12,10 @@
     <div class="signed-in">
       <?php
 
-      $email = $_SESSION['email'];
+      $email = (isset($_SESSION['email']) ? $_SESSION['email'] : null);
+      // $email = $_SESSION['email'];
 
+      $user_id = (isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null);
       if (is_numeric($_SESSION['user_id'])){
           echo "<div class='welcome'>
                 <p>Hello
@@ -35,7 +34,7 @@
 
       ?>
     </div>
-    
+
 </div>
 
 <header>
