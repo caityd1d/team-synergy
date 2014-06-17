@@ -1,7 +1,8 @@
+<!-- put in company field you lazy bastards and make horizontal -->
 <?php
 
-error_reporting(E_ALL);
-ini_set('display_errors', 'on');
+// error_reporting(E_ALL);
+// ini_set('display_errors', 'on');
 
 include 'initialize.php';
 
@@ -9,7 +10,30 @@ if (!is_numeric($_SESSION['user_id'])) {
     die('You need to log in');
 } 
 
-echo 'You\'re logged in ' . $_SESSION['email'];
+// echo 'You\'re logged in ' . $_SESSION['email'];
+
+$db = new DB();
+    
+    $user_id = $_GET['user_id'];
+
+    $sql = "
+            SELECT *
+            FROM Reviews
+            WHERE person_id = $user_id";
+
+    $results = $db->execute($sql);
+
+    $reviews = [];
+
+    while ($row = $results->fetch_assoc()) {
+        // array_push($reviews, $row);
+        $reviews[$row['review_id']]=$row;
+        // print_r($reviews); 
+    };
+
+
+
+    // $reviews = $_GET['user_id'];
 
 ?>
 
@@ -19,13 +43,69 @@ echo 'You\'re logged in ' . $_SESSION['email'];
     <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script src="main.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="table.css">
    
 </head>
 <body>
-
-    <?php include 'header.php';?>
-    
+    <main>
+        <?php include 'header.php';?>
+    </main>
+    <section>
+        <h1>My Reviews as a Former Employee</h1>
+       
+                <?php foreach($reviews as $i => $value) {
+                    echo "<table>
+                            <thead>
+                                <tr>
+                                  <th>Qualities</th>
+                                  <th>Scores</th>
+                                </tr>
+                              </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Work/Life Balance</td>
+                                    <td>{$reviews[$i]['WLBalance']}</td>
+                                </tr>    
+                                    <td>Salary</td>
+                                    <td>{$reviews[$i]['Salary']}</td> 
+                                </tr>
+                                    <td>Benefits</td>
+                                    <td>{$reviews[$i]['Benefits']}</td>
+                                </tr>
+                                    <td>Advancement Opportunities</td>
+                                    <td>{$reviews[$i]['Opportunity']}</td> 
+                                </tr>
+                                    <td>Equality/Fairness</td>
+                                    <td>{$reviews[$i]['Fairness']}</td> 
+                                </tr>
+                                    <td>Leadership</td>
+                                    <td>{$reviews[$i]['Leadership']}</td> 
+                                </tr>
+                                    <td>Loyalty</td>
+                                    <td>{$reviews[$i]['Loyalty']}</td>
+                                </tr>
+                                    <td>Morale</td>
+                                    <td>{$reviews[$i]['Morale']}</td> 
+                                </tr>
+                                    <td>Communication</td>
+                                    <td>{$reviews[$i]['Communication']}</td>
+                                </tr> 
+                            </tbody>   
+                    </table>";
+                };?>
+    </section>
 </body>
-
-
 </html>
+                            
+                                
+                               
+                                    
+                                    
+                                     
+                                    
+                                    
+                                    
+                                     
+                                    
+                                     
+                            
