@@ -1,13 +1,26 @@
 
 <html>
+<head>
+    <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
+
 
      <body>
+<meta charset="utf8">
+
+    <link rel="stylesheet" href="style.css">
+</head>    
+<body>
+
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="login.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
+  <script src="login.js"></script>
 
 <div class="title">
-    <h1>Inside Job</h1>
-    <h3>What It's REALLY Like on the Inside</h3>
+  <a class="logo" href="index.php"><img src="img/company-logo/inside-job.png"></a>
+  <h1>Inside Job</h1>
+  <h3>What It's REALLY Like on the Inside</h3>
 
     <div class="signed-in">
       <?php
@@ -39,8 +52,35 @@
   <nav>
             <a href="index.php" class="link">Home</a>
             <a href="companies.php" class="link">Companies</a>
-            <a href="contact.html" class="link">Contact Us</a>
-            <a href="signform.php" class="login">Log In</a>
+            <a href="survey.php" class="link">Rate Your Employer</a>
+
+            <div id="container">
+                <div id="loginContainer">
+                    <a href="#" id="loginButton"><span>Login</span><em></em></a>
+                    <div style="clear:both"></div>
+                    <div id="loginBox">                
+                        <form id="loginForm">
+                            <fieldset id="body">
+                                <fieldset>
+                                    <label for="email">Email Address</label>
+                                    <input type="text" name="email" id="email" />
+                                </fieldset>
+                                <fieldset>
+                                    <label for="password">Password</label>
+                                    <input type="password" name="password" id="password" />
+                                </fieldset>
+                                <input type="submit" id="login" value="Sign in" />
+                                <label for="checkbox"><input type="checkbox" id="checkbox" />Remember me</label>
+                            </fieldset>
+                            <span><a href="#">Forgot your password?</a></span>
+                        </form>
+                    </div>
+                </div>
+            </div>
+                <!-- Login Ends Here -->
+
+            <a href="login.php" class="login">Log In</a>
+
   </nav>
 </header>
 

@@ -41,7 +41,7 @@
 
 <body>
     <?php include 'header.php';?>
-    <form action="newuser.php" method="POST">
+    <form action="signup.php" method="POST">
         <fieldset> 
             <input type="text" placeholder="First" name="first_name">First Name<p></p>
             <input type="text" placeholder="Last" name="last_name">Last Name<p></p>

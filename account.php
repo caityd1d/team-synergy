@@ -47,6 +47,7 @@ $db = new DB();
    
 </head>
 <body>
+
     <main>
         <?php include 'header.php';?>
     </main>
@@ -94,6 +95,11 @@ $db = new DB();
                     </table>";
                 };?>
     </section>
+
+
+    <?php include 'header.php';?>
+    <?php echo 'You\'re logged in ' . $_SESSION['email']; ?>
+
 </body>
 </html>
                             
