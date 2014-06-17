@@ -27,6 +27,14 @@ header{
     height: 50px;
     background-color: #04033D;
 }
+.logo img{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-left: -30px;
+    margin-top: 10px;
+    margin-right: 20px;
+}
 
 .signed-in{
     position: absolute;
@@ -133,8 +141,9 @@ a:hover
 
 .userButton {
     float:right;
-    padding-top: 20px;
-    padding-right: 20px;
+    padding-top: 0px;
+    padding-right: 0px;
+
 }
 
 button {
@@ -253,6 +262,54 @@ aside{
     /*background-color: rgba(255,255,255, 0.3);*/
 }
 
+/* Companies CSS lives here now */
+.companies {
+  overflow: hidden;
+}
+.listing {
+  list-style-type: none;
+  float: left;
+}
+
+.listing h4 {
+  margin-top: 0;
+}
+
+.listing div img {
+  height: 100px;
+  min-width: 100px;
+  max-width: 200px;
+  float: left;
+  display: block;
+  border-radius: 10px;
+  margin:5px;
+}
+
+.content {
+  background-color: #597571;
+  margin: 5px;
+  text-align: center;
+  float:right;
+  
+}
+
+/*.listing div {
+  margin: 5px;
+  background-color: #597571;
+  list-style-type: none;
+  
+
+}*/
+
+
+.outer {
+  background-color: #597571;
+  margin:3px;
+  width: 550px;
+  float: left;
+}
+
+/*------- End Companies CSS ---------*/
 
 /*----------Slider CSS Below------------------*/
 
