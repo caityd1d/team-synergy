@@ -10,8 +10,8 @@
     $results = $db->execute($sql);
     print_r($_SESSION['user_id']);
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_SESSION['user_id'])){
-            header("Location: signform.php");
+        if (isset($_SESSION['user_id'])=== false){
+            header("Location: login.php");
             die("You must be logged in to create reviews.");
         }
         $sql_values = $_POST;
@@ -21,7 +21,9 @@
     }
 ?>
 
+
 <html>
+
 
     <head>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>

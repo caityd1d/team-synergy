@@ -4,11 +4,12 @@ $(function(){
         var value = $(this).val();
         $(this).next().text(value);
     });
-
-    $('body').on('click', '.signOut', function(){
+    
+    $('.signOut').click(function(){
        
-        window.location = '/Team-Synergy-Team/logout.php';
+        window.location = 'logout.php';
+
 
     });
-    
+
 });

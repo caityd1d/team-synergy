@@ -1,5 +1,9 @@
 <?php 
 include 'initialize.php';
+
+if ($_SESSION['user_id']){
+  header("Location: account.php?user_id={$_SESSION['user_id']}");
+}
  ?>
 
   <!DOCTYPE html>

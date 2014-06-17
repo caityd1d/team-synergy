@@ -106,8 +106,7 @@ $db = new DB();
     </section>
 
 
-    <?php include 'header.php';?>
-    <?php echo 'You\'re logged in ' . $_SESSION['email']; ?>
+    <!-- <?php echo 'You\'re logged in ' . $_SESSION['email']; ?> -->
 
 </body>
 </html>
