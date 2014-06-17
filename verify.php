@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
             if (password_verify($_POST['password'], $results['password'])){
                 $_SESSION['user_id'] = $results['person_id'];
                 $_SESSION['email'] = $results['email'];
-                header("Location: account.php");
+                header("Location: account.php?user_id=$results['person_id']");
                 exit();
             } else {
                 $error_string = 'Sorry, bad password. Stop sucking.';

@@ -29,23 +29,21 @@
       // $email = $_SESSION['email'];
 
       $user_id = (isset($_SESSION['user_id']) ? $_SESSION['user_id'] : null);
-      if (is_numeric($_SESSION['user_id'])){
-          echo "<div class='welcome'>
-                <p>Hello
-                  <a href='account.php'class='userName'>$email</a> Not 
-                  <a href='account.php'class='nonUser'>$email</a>?
-                  <button class='signOut'>Sign Out</button>
-                </p>
-              </div>";
-        } else {
-          echo "<div class='userButton'>
-                <div>
-                  <button class='signinButton'>Sign In</button><button class='registerButton'>Register</button>
-                </div>
-              </div>";
-        }
-
-      ?>
+      if (is_numeric($_SESSION['user_id'])){ ?>
+          <div class='welcome'>
+            <p>Hello
+              <a href="account.php?user_id=<?php echo $_SESSION['user_id']?>" class="userName"><?php echo "$email" ?></a> Not 
+              <a href="account.php?user_id=<?php echo $_SESSION['user_id']?>" class='nonUser'><?php echo "$email" ?></a>?
+              <button class='signOut'>Sign Out</button>
+            </p>
+          </div>
+        <?php } else { ?>
+          <div class='userButton'>
+            <div>
+              <button class='signinButton'>Sign In</button><button class='registerButton'>Register</button>
+            </div>
+          </div>
+      <?php  } ?>
     </div>
 
 </div>
