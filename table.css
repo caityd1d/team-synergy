@@ -1,5 +1,15 @@
+section {
+    overflow: hidden;
+
+
+}
+
 table {
   border-collapse: collapse;
+  display: block;
+  float: left;
+  margin: 10px;
+
 }
 
 th {

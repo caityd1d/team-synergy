@@ -54,11 +54,20 @@ $db = new DB();
     <section>
         <h1>My Reviews as a Former Employee</h1>
        
-                <?php foreach($reviews as $i => $value) {
+                 <?php foreach($reviews as $i => $value) {
+                    $sql_comp = "
+                        SELECT *
+                        FROM Companies
+                        WHERE company_id = {$reviews[$i]['company_id']}";
+
+                    $output = $db->execute($sql_comp);
+
+                    $company_info = $output->fetch_assoc();
+
                     echo "<table>
                             <thead>
                                 <tr>
-                                  <th>Qualities</th>
+                                  <th>Qualities at {$company_info['Name']}</th>
                                   <th>Scores</th>
                                 </tr>
                               </thead>
