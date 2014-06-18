@@ -69,6 +69,7 @@ include 'initialize.php';
             
               <div class="employees">
                 <h2>Employee</h2>
+                <button class="btn" onclick="window.location.href='survey.php'">Rate a company</button>
                 </div>
 
   </div>

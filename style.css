@@ -154,6 +154,14 @@ button {
     border-radius: 10px;
 }
 
+.btn {
+    background-color: #04033D;
+    color:#FFF;
+    height: 30px;
+    width: 90px;
+    border-radius: 10px;
+}
+
 .top-form {
     margin: 10px 0;
     margin-left: auto;
