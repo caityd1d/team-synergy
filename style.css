@@ -319,6 +319,69 @@ aside{
 
 /*------- End Companies CSS ---------*/
 
+
+
+/*------- Begin Company Detail CSS ---------*/
+
+
+.company-detail main {
+    
+    height: 250px;
+    width: auto;
+    background-color: 969F85;
+    padding: 10px;
+}
+
+.company-detail .inner {
+    
+    height: 225px;
+    width: 960px;
+    overflow: hidden;
+    text-align: center;
+
+}
+
+
+.company-detail h1 {
+
+    padding-top: 10px;
+
+}
+
+
+
+.company-detail img {
+    
+    margin: 10px;
+    height: 150px;
+    width: 150px;
+    float: left;
+    background-color: white;
+
+}
+
+.company-detail .paragraph {
+
+    margin-left: 120px;
+}
+
+.company-detail .hyperlink {
+
+    text-align: center;
+    margin-top: 10px;
+}
+
+.company-detail .link {
+
+    text-decoration: none;
+    margin-top: 10px;
+
+}
+
+
+/*------- End Company Detail CSS ---------*/
+
+
 /*----------Slider CSS Below------------------*/
 
 .futurico-theme .slider-wrapper {
