@@ -64,7 +64,7 @@ include 'initialize.php';
             
               <div class="employers">
                 <h2>Employers</h2>
-                <button class="btn" onclick="window.location.href='companies.php'">see you ratings</button>
+                <button class="btn" onclick="window.location.href='companies.php'">see your ratings</button>
                 
               </div>
             

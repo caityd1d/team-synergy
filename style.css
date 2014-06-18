@@ -158,7 +158,7 @@ button {
     background-color: #04033D;
     color:#FFF;
     height: 30px;
-    width: 90px;
+    width: auto;
     border-radius: 10px;
 }
 
