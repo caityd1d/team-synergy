@@ -1,10 +1,7 @@
 <?php 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 'on');
-
-include_once 'db.php';
+include 'initialize.php';
 include 'payload.php';
-
+include 'newaverages.php';
 $db = new DB;
 $search = (isset($_GET['search']) ? $_GET['search'] : null);
 
@@ -21,12 +18,16 @@ $results = $db->execute($sql);
 Payload::$values = [];
 
 while($row = $results->fetch_assoc()){
+  
+    $avg = getAverages($row['company_id']);
     $a = [];
     $a['Name'] = $row['Name'];
     $a['Industry'] = $row['Industry'];
     $a['Website'] = $row['Website'];
     $a['Logo'] = $row['Logo'];
     $a['Id'] = $row['company_id'];
+    $a['Average'] = $avg['Average'];
+    // print_r($a);
     array_push(Payload::$values, $a);
  }   
     
@@ -45,7 +46,6 @@ while($row = $results->fetch_assoc()){
     <link href='http://fonts.googleapis.com/css?family=Francois+One' rel='stylesheet' type='text/css'>
     <script src="render.js"></script>
     <link rel="stylesheet" type="text/css" href="company.css">
-    <link rel="stylesheet" type="text/css" href="companies.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -65,7 +65,7 @@ while($row = $results->fetch_assoc()){
                   <div class="outer">
                     <a href="template.php?company_id={{Id}}"><img src="{{Logo}}"></a>
                     <div class="content">
-                      <h4>{{Name}}</h4>
+                      <h4>{{Name}}: Average Rating: {{Average}}</h4>
                       <p>{{Industry}}</p>
                       <a href="{{Website}}">{{Name}}'s website</a>
                     </div>

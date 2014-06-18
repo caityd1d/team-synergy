@@ -8,12 +8,13 @@
     session_start();
     $sql = "SELECT * FROM Companies";
     $results = $db->execute($sql);
-    print_r($_SESSION['user_id']);
+            print_r($_SESSION);
+    if (count($_SESSION['user_id'])== 0){
+        header("Location: login.php");
+        die("You must be logged in to create reviews.");
+    }
+    
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        if (isset($_SESSION['user_id'])=== false){
-            header("Location: login.php");
-            die("You must be logged in to create reviews.");
-        }
         $sql_values = $_POST;
         // print_r($sql_values);
         $table = "Reviews"; 

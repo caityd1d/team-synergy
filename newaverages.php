@@ -1,11 +1,13 @@
 <?php 
+
+include 'initialize.php';
+$db = new DB;
 function getAverages($company_id){
-    include 'initialize.php';
     $db = new DB;
     $sql = "SELECT * FROM Reviews WHERE company_id = $company_id";
     $results = $db->execute($sql);
     $count = $results->num_rows;
-    $keys = ['WLBalance', 'Salary', 'Benefits', 'Opportunity', 'Fairness', 'Leadership', 'Loyalty', 'Morale', 'Communication'];
+    $keys = ['company_id', 'WLBalance', 'Salary', 'Benefits', 'Opportunity', 'Fairness', 'Leadership', 'Loyalty', 'Morale', 'Communication'];
     $scores = [];
     $superaverage = 0;
 
@@ -16,7 +18,7 @@ function getAverages($company_id){
     while ($row = $results->fetch_assoc()) {
         unset($row['review_id']);
         unset($row['person_id']);
-        unset($row['company_id']);
+        // unset($row['company_id']);
         unset($row['ReviewText']);
         
         foreach ($row as $key=>$value) {
@@ -25,7 +27,7 @@ function getAverages($company_id){
     }
 
     foreach ($scores as $key => $value) {
-        $scores[$key] = $value / $count;
+        $scores[$key] = substr($value / $count, 0, 4);
     }
 
     foreach ($scores as $key => $value) {
@@ -39,7 +41,9 @@ function getAverages($company_id){
     return($scores);
 }
 
-$scores = getAverages(1);
+// $scores = getAverages(1);
+
+// $db->insert(Averages, $scores);
 
 // print_r($scores);
 ?>
