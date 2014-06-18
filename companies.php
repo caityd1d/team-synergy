@@ -63,7 +63,7 @@ while($row = $results->fetch_assoc()){
         {{#each this}}
                 <li class="{{Id}}">
                   <div class="outer">
-                    <a href="template.php?company_id={{Id}}"><img src="{{Logo}}"></a>
+                    <a href="companydetail.php?company_id={{Id}}"><img src="{{Logo}}"></a>
                     <div class="content">
                       <h4>{{Name}}: Average Rating: {{Average}}</h4>
                       <p>{{Industry}}</p>

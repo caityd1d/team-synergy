@@ -7,12 +7,14 @@ a
     width:262px; 
     margin:0 auto; 
     padding-top:200px;
+
 }
 
 #container
 {
  width:960px; 
  margin:0 auto; 
+
 }
 
 /*-------LOGIN STARTS HERE -------*/
@@ -23,6 +25,8 @@ a
     position:relative;
     float:right;
     font-size:12px;
+    margin: 10px 20px 0px 0px;
+
 }
 
 /* Login Button */
@@ -46,9 +50,10 @@ a
     font-size:14px; 
     font-weight:bold; 
     text-shadow:1px 1px #fff; 
-    padding:7px 29px 9px 10px;
+    padding:5px 28px 7px 9px;
     background:url(login-img/loginArrow.png) no-repeat 53px 7px;
-    display:block
+    display:block;
+
 
 }
 
