@@ -67,8 +67,8 @@ $db = new DB();
                     echo "<table>
                             <thead>
                                 <tr>
-                                  <th>Qualities at {$company_info['Name']}</th>
-                                  <th>Scores</th>
+                                  <th><div style='width: 275px'>Qualities at {$company_info['Name']}</div></th>
+                                  <th><div style='width: 50px'>Scores</div></th>
                                 </tr>
                               </thead>
                             <tbody>
