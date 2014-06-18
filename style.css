@@ -158,7 +158,15 @@ button {
     background-color: #04033D;
     color:#FFF;
     height: 30px;
-    width: auto;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.rt-btn {
+    background-color: #04033D;
+    color:#FFF;
+    height: 30px;
+    width: 105px;
     border-radius: 10px;
 }
 
