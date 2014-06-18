@@ -154,6 +154,22 @@ button {
     border-radius: 10px;
 }
 
+.btn {
+    background-color: #04033D;
+    color:#FFF;
+    height: 30px;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.rt-btn {
+    background-color: #04033D;
+    color:#FFF;
+    height: 30px;
+    width: 105px;
+    border-radius: 10px;
+}
+
 .top-form {
     margin: 10px 0;
     margin-left: auto;

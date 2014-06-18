@@ -12,12 +12,16 @@ table {
 
 }
 
-th {
-    background-color: #969F85;
-    
-}
+
 td, th {
-  border: 1px solid #999;
+  
   padding: 0.5rem;
   text-align: left;
+  border: 1px solid #999;
+}
 
+th {
+    background-color: #969F85;
+    border: none;
+    
+}

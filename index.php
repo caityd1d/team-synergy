@@ -64,11 +64,13 @@ include 'initialize.php';
             
               <div class="employers">
                 <h2>Employers</h2>
+                <button class="rt-btn" onclick="window.location.href='companies.php'">See your ratings</button>
                 
               </div>
             
               <div class="employees">
                 <h2>Employee</h2>
+                <button class="btn" onclick="window.location.href='survey.php'">Rate a company</button>
                 </div>
 
   </div>
