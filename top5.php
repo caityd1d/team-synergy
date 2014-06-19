@@ -34,7 +34,7 @@
        
        //sort finished array high to low and grab the top 5
        arsort($compavg);
-       $topfive = array_slice($c, 0, 5);
+       $topfive = array_slice($compavg, 0, 5);
 
        return $topfive;
    };
