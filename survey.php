@@ -29,69 +29,129 @@
     <head>
         <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
         <script src="main.js"></script>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="survey.css">
     </head>
 
     <body>
         <?php include 'header.php';?>
         
         <form action="survey.php" method="POST">
+        <form action="priority.php" method="POST">
+
+
+
 
             <fieldset>
-                <legend>Rate Your Employer</legend>
+                <h1>Rate Your Employer</h1>
+                
                 <select class="employer" name="company_id">
                 <?php while($row = $results->fetch_assoc()){
                     echo "<option value=\"" . $row['company_id'] . "\">" . $row['Name'] . "</option>";};
                 ?>
                 </select><br>
+                    <table>
+                    <thead>
+                    <tr>
+                      <th><div style='width: 275px'>Rate Your Priorities</div></th>
+                      <th><div style='width: 100px'>Top Priority</div></th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                    <td>
+    
+                    <label for='balance'>Work/Life Balance</label> <br> 
+                    <input type=range min=0 max=10 value=0 step=1 list='balance' name="WLBalance" class="ranger"><p class="count" style="display: inline"></p>
+                    <datalist id='balance'>
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                    </datalist>
+                    <td><input type="radio" name="priority" value="balance"><br></td>
+                    </tr> 
+                                    
+                    <tr>
+                    <td>        
+                    <label for='salary'>Salary</label><br>
+                    <input type=range min=0 max=10 value=0 step=1 list='balance' name="Salary" class="ranger"><p class="count" style="display: inline"></p>
+                    <td><input type="radio" name="priority" value="salary"></td>
+                    </tr>
+
+                 
+                    <tr>
+                    <td>       
+                    <label for='benefits'>Benefits</label><br> 
+                    <input type=range min=0 max=10 value=0 step=1 list='balance' name="Benefits" class="ranger"><p class="count" style="display: inline"></p>
+                    <td><input type="radio" name="priority" value="benefits"></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>
+                    <label for='advancement'>Advancement Opportunities</label><br> 
+                    <input type=range min=0 max=10 value=0 step=1 list='balance' name="Opportunity" class="ranger"><p class="count" style="display: inline"></p>
+                    <td><input type="radio" name="priority" value="opportunities"></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>
+                    <label for='equality'>Fairness/Equality</label><br> 
+                    <input type=range min=0 max=10 value=0 step=1 list='balance' name="Fairness" class="ranger"><p class="count" style="display: inline"></p>
+                    <td><input type="radio" name="priority" value="fairness"></td>
+                    </tr>
+                     
+                    <tr>
+                    <td>
+                    <label for='leadership'>Quality of Leadership</label><br>
+                    <input type=range min=0 max=10 value=0 step=1 list='balance' name="Leadership" class="ranger"><p class="count" style="display: inline"></p>
+                    <td><input type="radio" name="priority" value="leadership"></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>
+                    <label for='loyalty'>Loyalty</label><br> 
+                    <input type=range min=0 max=10 value=0 step=1 list='balance' name="Loyalty" class="ranger"><p class="count" style="display: inline"></p>
+                    <td><input type="radio" name="priority" value="loyalty"></td>
+                    </tr>
+                    
+                    <tr>
+                    <td>
+                    <label for='morale'>Morale</label><br> 
+                    <input type=range min=0 max=10 value=0 step=1 list='balance' name="Morale" class="ranger"><p class="count" style="display: inline"></p>
+                    <td><input type="radio" name="priority" value="morale"></td>
+                    </tr>
+                     
+                    <tr>
+                    <td>
+                    <label for='communication'>Communication</label><br> 
+                    <input type=range min=0 max=10 value=0 step=1 list='balance' name="Communication" class="ranger"><p class="count" style="display: inline"></p>
+                    <td><input type="radio" name="priority" value="communication"></td>
+                    </tr>
+                    
+                    </tbody>
+                </table>
+
                 
-                <label for='balance'>Work/Life Balance</label> <br> 
-                <input type=range min=0 max=10 value=0 step=1 list='balance' name="WLBalance" class="ranger"><p class="count" style="display: inline"></p>
-                <datalist id='balance'>
-                <option>0</option>
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
-                <option>6</option>
-                <option>7</option>
-                <option>8</option>
-                <option>9</option>
-                <option>10</option>
-                </datalist>
-                <br> <br>        
-                <label for='salary'>Salary</label> <br> 
-                <input type=range min=0 max=10 value=0 step=1 list='balance' name="Salary" class="ranger"><p class="count" style="display: inline"></p>
-                <br> <br>        
-                <label for='benefits'>Benefits</label><br> 
-                <input type=range min=0 max=10 value=0 step=1 list='balance' name="Benefits" class="ranger"><p class="count" style="display: inline"></p>
-                <br><br> 
-                <label for='advancement'>Advancement Opportunities</label><br> 
-                <input type=range min=0 max=10 value=0 step=1 list='balance' name="Opportunity" class="ranger"><p class="count" style="display: inline"></p>
-                <br><br> 
-                <label for='equality'>Fairness/Equality</label><br> 
-                <input type=range min=0 max=10 value=0 step=1 list='balance' name="Fairness" class="ranger"><p class="count" style="display: inline"></p>
-                <br><br> 
-                <label for='leadership'>Quality of Leadership</label><br>
-                <input type=range min=0 max=10 value=0 step=1 list='balance' name="Leadership" class="ranger"><p class="count" style="display: inline"></p>
-                <br><br> 
-                <label for='loyalty'>Loyalty</label><br> 
-                <input type=range min=0 max=10 value=0 step=1 list='balance' name="Loyalty" class="ranger"><p class="count" style="display: inline"></p>
-                <br><br> 
-                <label for='morale'>Morale</label><br> 
-                <input type=range min=0 max=10 value=0 step=1 list='balance' name="Morale" class="ranger"><p class="count" style="display: inline"></p>
-                <br><br> 
-                <label for='communication'>Communication</label><br> 
-                <input type=range min=0 max=10 value=0 step=1 list='balance' name="Communication" class="ranger"><p class="count" style="display: inline"></p>
-                <br><br> 
+               
+                
                 <textarea cols="50" rows="10" spellcheck='true' name='ReviewText' placeholder='Tell us about your employer'></textarea><br>
 
                 <button type="submit">Submit</button>
                 
                 <input type="hidden" value=<?php echo "$_SESSION[user_id]";?> name="person_id">
-            </fieldset>
-        </form>
+            </form>
+            </form>
+
+           
+      </fieldset>
+        
     </body>
 </html>
 
