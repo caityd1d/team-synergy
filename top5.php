@@ -1,43 +1,41 @@
 <?php 
     include 'initialize.php';
+    
+    //Get the five companies that have the highest scores in the users selected priority
     function getTopFive($uid){
 
        $db = new DB;
+       
+       //Create an array of all companies in format [companyname => companyid]
        $sql = "SELECT company_id, Name FROM Companies";
        $compresults = $db->execute($sql);
        $allcompanies = [];
-       $categoryavg = [];
-       $c = [];
+       $compavg = [];
        
        while ($row = $compresults->fetch_assoc()){
-        $allcompanies[$row['Name']] = $row['company_id'];
+          $allcompanies[$row['Name']] = $row['company_id'];
         
        }
 
+       //Find the user's priority selection
        $usrsql = "SELECT priority FROM People WHERE person_id = $uid";
-       // $usrsql = "SELECT priority FROM People WHERE person_id = 1";
        $usrresults = $db->execute($usrsql);
        $usrresults = $usrresults->fetch_assoc();
        $priority = $usrresults['priority'];
 
-
+       //get the average rating of each company in the prioritized category and store in an array
        foreach ($allcompanies as $key => $value) {
+           //hey guess what SQL can calculate column averages for you
            $avgsql = "SELECT AVG($priority) FROM Reviews WHERE company_id = $value";
            $avgresults = $db->execute($avgsql);
-           
            $avgresults = $avgresults->fetch_assoc();
-           $c[$key] = implode(".", $avgresults);
-        
-
+           $compavg[$key] = implode(".", $avgresults);
        }
        
-       // print_r($c);
-       arsort($c);
-       // print_r($c);
+       //sort finished array high to low and grab the top 5
+       arsort($compavg);
        $topfive = array_slice($c, 0, 5);
 
-       echo "<br><br>";
-       // print_r($topfive);
        return $topfive;
    };
  ?>
