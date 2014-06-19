@@ -34,10 +34,10 @@ a
 { 
     display:inline-block;
     float:right;
-    background:#d2e0ea url(login-img/buttonbg.png) repeat-x; 
-    border:1px solid #899caa; 
-    border-radius:7px;
-    -moz-border-radius:3px;
+   /* background:#d2e0ea url(login-img/buttonbg.png) repeat-x;*/ 
+   background-color: #04033D;
+    border:1px solid #fff; 
+    -moz-border-radius:7px;
     position:relative;
     z-index:30;
     cursor:pointer;
@@ -46,20 +46,23 @@ a
 /* Login Button Text */
 #loginButton span 
 {
-    color:#445058; 
-    font-size:14px; 
+    color:#fff; 
+    font-size:16px; 
     font-weight:bold; 
-    text-shadow:1px 1px #fff; 
     padding:5px 28px 7px 9px;
     background:url(login-img/loginArrow.png) no-repeat 53px 7px;
     display:block;
+
 
 
 }
 
 #loginButton:hover
 {
-    background:url(login-img/buttonbgHover.png) repeat-x;
+   /* background:url(login-img/buttonbgHover.png) repeat-x;*/
+   background-color: #04033D;
+
+   
 }
 
 /* Login Box */
@@ -75,12 +78,14 @@ a
 /* If the Login Button has been clicked */    
 #loginButton.active
 {
-    border-radius:3px 3px 0 0;
+    border-radius:10px 10px 0 0;
+
 }
 
 #loginButton.active span 
 {
     background-position:53px -76px;
+
 }
 
 /* A Line added to overlap the border */

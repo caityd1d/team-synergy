@@ -38,11 +38,7 @@
             </p>
           </div>
         <?php } else { ?>
-          <div class='userButton'>
-            <div>
-              <button class='signinButton'>Sign In</button><button class='registerButton'>Register</button>
-            </div>
-          </div>
+          
       <?php  } ?>
     </div>
 
@@ -53,14 +49,15 @@
             <a href="index.php" class="link">Home</a>
             <a href="companies.php" class="link">Companies</a>
             <a href="survey.php" class="link">Rate Your Employer</a>
-
+            
+            
             <div id="container">
                 <div id="loginContainer">
                     <a href="#" id="loginButton"><span>Login</span><em></em></a>
                     <div style="clear:both"></div>
                     <div id="loginBox">                
-                        <form id="loginForm">
-                            <fieldset id="body">
+                        <form id="loginForm" action = "verify.php" method = "POST">
+                            <fieldset id="body" >
                                 <fieldset>
                                     <label for="email">Email Address</label>
                                     <input type="text" name="email" id="email" />
@@ -78,8 +75,6 @@
                 </div>
             </div>
                 <!-- Login Ends Here -->
-
-            <a href="login.php" class="login">Log In</a>
 
   </nav>
 </header>

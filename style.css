@@ -36,17 +36,14 @@ header{
     margin-right: 20px;
 }
 
-.signed-in{
-    position: absolute;
-    right: 85px;
-    top: 40px;
-    text-decoration: none;
 
-}
 
 .signOut{
     background-color:;
-}
+    float: right; 
+    margin: 0px 50px 0px 0px;
+    padding-bottom: 10px;
+  }
 
 .clearfix {
     clear:all;
@@ -85,18 +82,6 @@ nav{
   
 } 
 
-nav .login{
-    float: right;
-    height: 24px;
-    margin: 8px 0 0 20px;
-    padding: 0px 50px 10px 0px;
-    background: transparent; 
-    border-radius: 10px;
-    text-align: center;
-    color: #FFF;
-    text-decoration: none;
-
-}
 
 nav .link
 { 
