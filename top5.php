@@ -25,11 +25,16 @@
 
        //get the average rating of each company in the prioritized category and store in an array
        foreach ($allcompanies as $key => $value) {
-           //hey guess what SQL can calculate column averages for you
-           $avgsql = "SELECT AVG($priority) FROM Reviews WHERE company_id = $value";
-           $avgresults = $db->execute($avgsql);
-           $avgresults = $avgresults->fetch_assoc();
-           $compavg[$key] = implode(".", $avgresults);
+           //if the user has a set priority do work or redirect to survey page
+           if($priority){
+            //hey guess what SQL can calculate column averages for you
+            $avgsql = "SELECT AVG($priority) FROM Reviews WHERE company_id = $value";
+            $avgresults = $db->execute($avgsql);
+            $avgresults = $avgresults->fetch_assoc();
+            $compavg[$key] = implode(".", $avgresults);
+           }else{
+            header("Location: survey.php");
+           }
        }
        
        //sort finished array high to low and grab the top 5
