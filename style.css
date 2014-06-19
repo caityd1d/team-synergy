@@ -158,7 +158,15 @@ button {
     background-color: #04033D;
     color:#FFF;
     height: 30px;
-    width: auto;
+    width: 100px;
+    border-radius: 10px;
+}
+
+.rt-btn {
+    background-color: #04033D;
+    color:#FFF;
+    height: 30px;
+    width: 105px;
     border-radius: 10px;
 }
 
@@ -323,31 +331,48 @@ aside{
 
 /*------- Begin Company Detail CSS ---------*/
 
+.company-detail{
+  height: auto;
 
-.company-detail main {
-    
-    height: 250px;
-    width: auto;
-    background-color: 969F85;
-    padding: 10px;
 }
 
 .company-detail .inner {
     
-    height: 225px;
-    width: 960px;
+    
+    width: 50%;
+    background-color: 969F85;
+    padding: 10px;
+    float: left;
     overflow: hidden;
-    text-align: center;
-
+    text-align: left;
 }
 
+.company-detail .logo{
+  width: 33%;
+  
+}
 
-.company-detail h1 {
+.company-detail .logo h1{
+  text-align: center;
+  margin: auto;
+}
+
+.company-detail p {
+  float:left;
+}
+
+.company-detail li {
+  list-style: none;
+  list-style-type: none;
+}
+
+/*.company-detail h1 {
 
     padding-top: 10px;
+    padding-right: 440px;
 
 }
-
+*/
 
 
 .company-detail img {
@@ -378,6 +403,26 @@ aside{
 
 }
 
+.company-detail .ratings {
+  height: auto;
+  background-color: 969F85;
+  padding: 10px;
+  overflow: hidden;
+  text-align: left;
+
+  float:left;
+  margin-left: 15px;
+  list-style-type: none;
+
+}
+
+ .reviews{
+  clear:left;
+}
+
+h1 button{
+  margin-left: 10px;
+}
 
 /*------- End Company Detail CSS ---------*/
 
