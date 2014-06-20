@@ -5,13 +5,14 @@
     // ini_set('display_errors', 'on');
 
     include 'initialize.php';
-    $db = new DB();
+    // $db = new DB();
     $emailreg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+/';
     $passreg = '/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/';
     $errorarray = [];
     $errorstring = "";
     $sql = "SELECT * FROM People WHERE email = $_POST['email]";
-    $result = $db->execute($sql);
+    $results = db::execute($sql);
+    // $result = $db->execute($sql);
     // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //     //Check email against REGEX
     //     if (preg_match($emailreg, $_POST['email']) === 1){

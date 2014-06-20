@@ -14,7 +14,7 @@ if (!is_numeric($_SESSION['user_id'])) {
 // echo 'You\'re logged in ' . $_SESSION['email'];
 // $best = getTopFive($_SESSION['user_id']);
 
-$db = new DB();
+// $db = new DB();
     
     $user_id = $_GET['user_id'];
 
@@ -23,7 +23,8 @@ $db = new DB();
             FROM Reviews
             WHERE person_id = $user_id";
 
-    $results = $db->execute($sql);
+    $results = db::execute($sql);
+    // $results = $db->execute($sql);
 
     $reviews = [];
 
@@ -62,7 +63,8 @@ $db = new DB();
                         FROM Companies
                         WHERE company_id = {$reviews[$i]['company_id']}";
 
-                    $output = $db->execute($sql_comp);
+                    $output = db::execute($sql_comp);
+                    // $output = $db->execute($sql_comp);
 
                     $company_info = $output->fetch_assoc();
 

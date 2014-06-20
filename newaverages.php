@@ -14,9 +14,11 @@ function getAverages($company_id){
     }
     
     //now I know I could replace all of this with a simple SQL query 
-    $db = new DB;
+    // $db = new DB;
+
     $sql = "SELECT * FROM Reviews WHERE company_id = $company_id";
-    $results = $db->execute($sql);
+    $results = db::execute($sql);
+    // $results = $db->execute($sql);
     //grab number of reviews for calculating average
     $count = $results->num_rows;
 

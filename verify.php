@@ -4,7 +4,7 @@
 
 include 'initialize.php';
 
-$db = new DB;
+// $db = new DB;
 
 session_start();
 if ($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -12,7 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $email = $_POST['email'];
     $password = $_POST['password'];
     $sql = "SELECT * from People WHERE email = '{$email}'";
-    $results = $db->execute($sql);
+    $results = db::execute($sql);
+    // $results = $db->execute($sql);
     $results_ok = $results->num_rows;
     $results = $results ->fetch_assoc();
     if ($results_ok == 0){

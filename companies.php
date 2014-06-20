@@ -2,7 +2,7 @@
 include 'initialize.php';
 include 'payload.php';
 include 'newaverages.php';
-$db = new DB;
+//$db = new DB;
 $search = (isset($_GET['search']) ? addslashes($_GET['search']) : null);
 
 
@@ -13,7 +13,8 @@ if ($search===''){
 
 }
 
-$results = $db->execute($sql);
+//$results = $db->execute($sql);
+$results = db::execute($sql);
 
 Payload::$values = [];
 
