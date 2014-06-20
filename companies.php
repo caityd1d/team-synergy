@@ -3,13 +3,13 @@ include 'initialize.php';
 include 'payload.php';
 include 'newaverages.php';
 $db = new DB;
-$search = (isset($_GET['search']) ? $_GET['search'] : null);
+$search = (isset($_GET['search']) ? addslashes($_GET['search']) : null);
 
 
 if ($search===''){
     $sql = "SELECT * FROM Companies";
 } else {
-    $sql = "SELECT * FROM Companies WHERE Name LIKE '%$search%'";
+    $sql = "SELECT * FROM Companies WHERE Name LIKE '%$search%' ";
 
 }
 

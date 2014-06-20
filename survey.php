@@ -16,6 +16,7 @@
     
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $sql_values = $_POST;
+        $sql_values['ReviewText'] = addslashes($_POST['ReviewText']);
         // print_r($sql_values);
         $table = "Reviews"; 
         $db->insert($table, $sql_values);
