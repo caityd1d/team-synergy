@@ -1,3 +1,6 @@
+/*Here be dragons! This is the correct stylesheet*/
+
+
 *
 { 
     margin: 0;
@@ -223,7 +226,7 @@ fieldset#body
     width:auto;
     float:left;
     background:#339cdf url(login-img/loginbuttonbg.png) repeat-x;
-  color:#fff;
+    color:#fff;
     padding:7px 10px 8px 10px;
     text-shadow:0px -1px #278db8;
     border:1px solid #339cdf;
@@ -529,7 +532,7 @@ aside{
     
     
     width: 50%;
-    background-color: 969F85;
+    background-color: #969F85;
     padding: 10px;
     float: left;
     overflow: hidden;
@@ -594,7 +597,7 @@ aside{
 
 .company-detail .ratings {
   height: auto;
-  background-color: 969F85;
+  background-color: #969F85;
   padding: 10px;
   overflow: hidden;
   text-align: left;
