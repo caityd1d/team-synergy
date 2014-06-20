@@ -6,6 +6,7 @@
 
 // Database
 include_once('db.php');
+include_once('db_credentials.php');
 // $db = new DB;
 
 // Starts Sessions

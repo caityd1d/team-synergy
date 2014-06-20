@@ -5,15 +5,15 @@
     // ini_set('display_errors', 'on');
 
     include 'initialize.php';
-    $db = new DB();
+
     $emailreg = '/^[a-zA-Z-_.+]+@[a-zA-Z-_.+]+\.[a-z]{2,6}\.?[a-z]+/';
     $passreg = '/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/';
     $errorarray = [];
     $errorstring = "";
+
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        $sql = "SELECT * FROM People WHERE email = {ad$_POST['email']}";
-        $result = $db->execute($sql);
-        // print_r($result);
+        $sql = "SELECT * FROM People WHERE email = '{$_POST['email']}'";
+        $result = db::execute($sql);
         // Check email against REGEX
         if (preg_match($emailreg, $_POST['email']) === 1){
 
@@ -22,7 +22,7 @@
 
                 //Check that passwords match
                 if ($_POST['password'] == $_POST['verifypassword']){
-                    
+                    // print_r($_POST);
                     //Check password has 8chars and at least 1 number and one symbol
                     if (preg_match($passreg, $_POST['password']) == 1){
                         //Drop second password field
@@ -30,7 +30,8 @@
                         $sql_values = $_POST;
                         $sql_values['password'] = password_hash($sql_values['password'], PASSWORD_DEFAULT);
                         $table = "People"; 
-                        $db->insert($table, $sql_values);
+                        // db::insert($table, $sql_values);
+                    
                     }else{
                         $errorstring = "Your password must be at least 8 characters with at least one number and one symbol";
                         array_push($errorarray, $errorstring);
@@ -76,9 +77,9 @@
             <button type="submit">Submit</button>
             <button class="cancel">Cancel</button>
             <p>
-                <?php foreach ($errorarray as $key) {
-                // echo "<br>" . $key . "<br>";
-                    echo "Hi";
+               <?php foreach ($errorarray as $key) {
+                    echo "<br>" . $key . "<br>";
+                    // echo "Hi";
             };?>
             </p>
         </fieldset>
