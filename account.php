@@ -5,14 +5,14 @@
 // ini_set('display_errors', 'on');
 
 include 'initialize.php';
-include 'top5.php';
+// include 'top5.php';
 
 if (!is_numeric($_SESSION['user_id'])) {
     die('You need to log in');
 } 
 
 // echo 'You\'re logged in ' . $_SESSION['email'];
-$best = getTopFive($_SESSION['user_id']);
+// $best = getTopFive($_SESSION['user_id']);
 
 $db = new DB();
     
@@ -106,7 +106,7 @@ $db = new DB();
                     </table>";
                 };?>
     </section>
-    <?php print_r($best);?>
+    
 
     <!-- <?php echo 'You\'re logged in ' . $_SESSION['email']; ?> -->
 

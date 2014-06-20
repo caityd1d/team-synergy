@@ -1,24 +1,42 @@
 <?php
 
+
     // error_reporting(E_ALL);
     // ini_set('display_errors', 'on');
     include 'initialize.php';
 
-    $db = new DB();
+    
     session_start();
+    print_r($_POST);
     $sql = "SELECT * FROM Companies";
-    $results = $db->execute($sql);
-            print_r($_SESSION);
+    $results = db::execute($sql);
+    $priority = "";
     if (count($_SESSION['user_id'])== 0){
         header("Location: login.php");
         die("You must be logged in to create reviews.");
     }
-    
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $priority = $_POST['priority'];
+        unset($_POST['priority']);
+        $_POST['ReviewText'] = "\"" . $_POST['ReviewText'] . "\"";
         $sql_values = $_POST;
+        // print_r($priority);
         // print_r($sql_values);
         $table = "Reviews"; 
-        $db->insert($table, $sql_values);
+        db::insert($table, $sql_values);
+
+    // $sql_peeps = "SELECT * FROM People";
+    // $results_peeps = db::execute($sql_peeps);
+    //         print_r($_SESSION);
+    
+        $peeps_values = ['priority'=>"$priority"];
+        print_r($peeps_values);
+        // Walk over and add quotes to values
+        $peeps_values = db::array_in_quotes($peeps_values);
+
+        // Execute SQL Statement
+        db::update('People', $peeps_values, "WHERE person_id = {$_SESSION['user_id']}");
+
     }
 ?>
 
@@ -36,7 +54,7 @@
         <?php include 'header.php';?>
         
         <form action="survey.php" method="POST">
-        <form action="priority.php" method="POST">
+        
 
 
 
@@ -75,14 +93,14 @@
                     <option>9</option>
                     <option>10</option>
                     </datalist>
-                    <td><input type="radio" name="priority" value="balance"><br></td>
+                    <td><input type="radio" name="priority" value="WLBalance"><br></td>
                     </tr> 
                                     
                     <tr>
                     <td>        
                     <label for='salary'>Salary</label><br>
                     <input type=range min=0 max=10 value=0 step=1 list='balance' name="Salary" class="ranger"><p class="count" style="display: inline"></p>
-                    <td><input type="radio" name="priority" value="salary"></td>
+                    <td><input type="radio" name="priority" value="Salary"></td>
                     </tr>
 
                  
@@ -90,49 +108,49 @@
                     <td>       
                     <label for='benefits'>Benefits</label><br> 
                     <input type=range min=0 max=10 value=0 step=1 list='balance' name="Benefits" class="ranger"><p class="count" style="display: inline"></p>
-                    <td><input type="radio" name="priority" value="benefits"></td>
+                    <td><input type="radio" name="priority" value="Benefits"></td>
                     </tr>
                     
                     <tr>
                     <td>
                     <label for='advancement'>Advancement Opportunities</label><br> 
                     <input type=range min=0 max=10 value=0 step=1 list='balance' name="Opportunity" class="ranger"><p class="count" style="display: inline"></p>
-                    <td><input type="radio" name="priority" value="opportunities"></td>
+                    <td><input type="radio" name="priority" value="Opportunity"></td>
                     </tr>
                     
                     <tr>
                     <td>
                     <label for='equality'>Fairness/Equality</label><br> 
                     <input type=range min=0 max=10 value=0 step=1 list='balance' name="Fairness" class="ranger"><p class="count" style="display: inline"></p>
-                    <td><input type="radio" name="priority" value="fairness"></td>
+                    <td><input type="radio" name="priority" value="Fairness"></td>
                     </tr>
                      
                     <tr>
                     <td>
                     <label for='leadership'>Quality of Leadership</label><br>
                     <input type=range min=0 max=10 value=0 step=1 list='balance' name="Leadership" class="ranger"><p class="count" style="display: inline"></p>
-                    <td><input type="radio" name="priority" value="leadership"></td>
+                    <td><input type="radio" name="priority" value="Leadership"></td>
                     </tr>
                     
                     <tr>
                     <td>
                     <label for='loyalty'>Loyalty</label><br> 
                     <input type=range min=0 max=10 value=0 step=1 list='balance' name="Loyalty" class="ranger"><p class="count" style="display: inline"></p>
-                    <td><input type="radio" name="priority" value="loyalty"></td>
+                    <td><input type="radio" name="priority" value="Loyalty"></td>
                     </tr>
                     
                     <tr>
                     <td>
                     <label for='morale'>Morale</label><br> 
                     <input type=range min=0 max=10 value=0 step=1 list='balance' name="Morale" class="ranger"><p class="count" style="display: inline"></p>
-                    <td><input type="radio" name="priority" value="morale"></td>
+                    <td><input type="radio" name="priority" value="Morale"></td>
                     </tr>
                      
                     <tr>
                     <td>
                     <label for='communication'>Communication</label><br> 
                     <input type=range min=0 max=10 value=0 step=1 list='balance' name="Communication" class="ranger"><p class="count" style="display: inline"></p>
-                    <td><input type="radio" name="priority" value="communication"></td>
+                    <td><input type="radio" name="priority" value="Communication"></td>
                     </tr>
                     
                     </tbody>
