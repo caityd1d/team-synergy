@@ -532,7 +532,7 @@ aside{
     
     
     width: 50%;
-    background-color: 969F85;
+    background-color: #969F85;
     padding: 10px;
     float: left;
     overflow: hidden;
@@ -597,7 +597,7 @@ aside{
 
 .company-detail .ratings {
   height: auto;
-  background-color: 969F85;
+  background-color: #969F85;
   padding: 10px;
   overflow: hidden;
   text-align: left;
