@@ -20,7 +20,11 @@
         unset($_POST['priority']);
         $_POST['ReviewText'] = "\"" . $_POST['ReviewText'] . "\"";
         $sql_values = $_POST;
+
         // print_r($priority);
+
+        $sql_values['ReviewText'] = addslashes($_POST['ReviewText']);
+
         // print_r($sql_values);
         $table = "Reviews"; 
         db::insert($table, $sql_values);

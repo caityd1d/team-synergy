@@ -106,7 +106,6 @@ $db = new DB();
                     </table>";
                 };?>
     </section>
-    
 
     <!-- <?php echo 'You\'re logged in ' . $_SESSION['email']; ?> -->
 
