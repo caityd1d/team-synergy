@@ -10,46 +10,47 @@
     $passreg = '/((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{8,64})/';
     $errorarray = [];
     $errorstring = "";
-    $sql = "SELECT * FROM People WHERE email = $_POST['email]";
-    $result = $db->execute($sql);
-    // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    //     //Check email against REGEX
-    //     if (preg_match($emailreg, $_POST['email']) === 1){
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        $sql = "SELECT * FROM People WHERE email = {ad$_POST['email']}";
+        $result = $db->execute($sql);
+        // print_r($result);
+        // Check email against REGEX
+        if (preg_match($emailreg, $_POST['email']) === 1){
 
-    //         //Check that email is unique
-    //         if ($result->num_rows == 0){
+            // Check that email is unique
+            if ($result->num_rows == 0){
 
-    //             //Check that passwords match
-    //             if ($_POST['password'] == $_POST['verifypassword']){
+                //Check that passwords match
+                if ($_POST['password'] == $_POST['verifypassword']){
                     
-    //                 //Check password has 8chars and at least 1 number and one symbol
-    //                 if (preg_match($passreg, $_POST['password']) == 1){
-    //                     //Drop second password field
-    //                     unset($_POST['verifypassword']);
-    //                     $sql_values = $_POST;
-    //                     $sql_values['password'] = password_hash($sql_values['password'], PASSWORD_DEFAULT);
-    //                     $table = "People"; 
-    //                     $db->insert($table, $sql_values);
-    //                 }else{
-    //                     $errorstring = "Your password must be at least 8 characters with at least one number and one symbol";
-    //                     array_push($errorarray, $errorstring);
-    //                 }
+                    //Check password has 8chars and at least 1 number and one symbol
+                    if (preg_match($passreg, $_POST['password']) == 1){
+                        //Drop second password field
+                        unset($_POST['verifypassword']);
+                        $sql_values = $_POST;
+                        $sql_values['password'] = password_hash($sql_values['password'], PASSWORD_DEFAULT);
+                        $table = "People"; 
+                        $db->insert($table, $sql_values);
+                    }else{
+                        $errorstring = "Your password must be at least 8 characters with at least one number and one symbol";
+                        array_push($errorarray, $errorstring);
+                    }
                
-    //             }else{
-    //                 $errorstring = "Your passwords do not match";
-    //                 array_push($errorarray, $errorstring);
-    //             }
+                }else{
+                    $errorstring = "Your passwords do not match";
+                    array_push($errorarray, $errorstring);
+                }
             
-    //         }else{
-    //             $errorstring = "Your email is already associated with an account";
-    //             array_push($errorarray, $errorstring);
-    //         }
+            }else{
+                $errorstring = "Your email is already associated with an account";
+                array_push($errorarray, $errorstring);
+            }
         
-    //     }else{
-    //         $errorstring = "Please enter a valid email";
-    //         array_push($errorarray, $errorstring);
-    //     }
-    // };
+        }else{
+            $errorstring = "Please enter a valid email";
+            array_push($errorarray, $errorstring);
+        }
+    }
 ?>
 
 <!DOCTYPE html>
@@ -74,10 +75,12 @@
             <input type="password" class="signup-box" placeholder="Verify Password" name="verifypassword"><br><br>
             <button type="submit">Submit</button>
             <button class="cancel">Cancel</button>
-            <p><?php foreach ($errorarray as $key) {
-                echo "<br>" . $key . "<br>";
-            }; 
-            ?></p>
+            <p>
+                <?php foreach ($errorarray as $key) {
+                // echo "<br>" . $key . "<br>";
+                    echo "Hi";
+            };?>
+            </p>
         </fieldset>
     </form>
 </body>
