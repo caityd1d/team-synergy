@@ -32,6 +32,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 }
 
-print_r($error_string);
+// print_r($error_string);
 ?>
 
