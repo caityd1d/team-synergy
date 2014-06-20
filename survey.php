@@ -19,11 +19,19 @@
         $priority = $_POST['priority'];
         unset($_POST['priority']);
         $_POST['ReviewText'] = "\"" . $_POST['ReviewText'] . "\"";
+        
         $sql_values = $_POST;
+
+        // $sql_values = [];
+        // $sql_values['Salary'] = $_POST['Salary'];
+
+
+
 
         // print_r($priority);
 
-        $sql_values['ReviewText'] = addslashes($_POST['ReviewText']);
+        //$sql_values['ReviewText'] = addslashes($_POST['ReviewText']);
+        $sql_values = db::array_in_quotes($sql_values);
 
         // print_r($sql_values);
         $table = "Reviews"; 
