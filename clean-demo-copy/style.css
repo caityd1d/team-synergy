@@ -85,39 +85,46 @@ a
 /* Login Container (default to float:right) */
 #loginContainer
 {
-  float:right;
-   /* position:relative;
+    position:relative;
+    float:right;
     font-size:12px;
-    margin: 10px 20px 0px 0px;*/
+    margin: 10px 20px 0px 0px;
 
 }
 
 /* Login Button */
 #loginButton
 { 
-/*    display:inline-block;
-    float:right;*/
+    display:inline-block;
+    float:right;
    /* background:#d2e0ea url(login-img/buttonbg.png) repeat-x;*/ 
-   /*background-color: #04033D;*/
+   background-color: #04033D;
     -moz-border-radius:10px;
     position:relative;
     cursor:pointer;
 }
 
 /* Login Button Text */
-#loginContainer a
-{ 
-    float: left;
-    height: 24px;
-    margin: 8px 0 0 30px;
-    padding: 0px 20px 10px 20px;
-    background: transparent; 
-    border-radius: 10px;
-    text-align: center;
-    color: #FFF;
-    text-decoration: none;
-} 
+#loginButton span 
+{
+    color:#fff; 
+    font-size:1.5em; 
+    font-weight:bold; 
+    padding:5px 28px 7px 9px;
+    /*background:url(login-img/loginArrow.png) no-repeat 53px 7px;*/
+    display:block;
 
+
+
+}
+
+#loginButton:hover
+{
+   /* background:url(login-img/buttonbgHover.png) repeat-x;*/
+   background-color: #04033D;
+
+   
+}
 
 /* Login Box */
 #loginBox 
@@ -136,6 +143,11 @@ a
 
 }
 
+#loginButton.active span 
+{
+    background-position:53px -76px;
+
+}
 
 /* A Line added to overlap the border */
 #loginButton.active em 
@@ -223,7 +235,7 @@ fieldset#body
     width:auto;
     float:left;
     background:#339cdf url(login-img/loginbuttonbg.png) repeat-x;
-  color:#fff;
+    color:#fff;
     padding:7px 10px 8px 10px;
     text-shadow:0px -1px #278db8;
     border:1px solid #339cdf;
@@ -282,7 +294,7 @@ nav{
 } 
 
 
-nav a
+nav .link
 { 
     float: left;
     height: 24px;
@@ -295,7 +307,13 @@ nav a
     text-decoration: none;
 } 
 
-
+/*nav a:hover;
+{ 
+    color: #000;
+    background: #BDBDBD;
+    background: (#2E2E2E, #848484);
+    text-shadow: none;
+}*/
 
 a {
     color: inherit;
@@ -332,22 +350,20 @@ button {
     border-radius: 10px;
 }
 
-.employers-button {
+.btn {
     background-color: #04033D;
     color:#FFF;
     height: 30px;
     width: 100px;
     border-radius: 10px;
-    margin-top: 20px;
 }
 
-.employees-button {
+.rt-btn {
     background-color: #04033D;
     color:#FFF;
     height: 30px;
     width: 105px;
     border-radius: 10px;
-    margin-top: 20px;
 }
 
 .top-form {

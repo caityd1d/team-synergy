@@ -14,6 +14,7 @@
 
 
 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="login.css" />
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js?ver=1.4.2"></script>
 <script src="login.js"></script>
 <script src="main.js"></script>
@@ -47,9 +48,9 @@
 
 <header>
   <nav>
-            <a href="index.php">Home</a>
-            <a href="companies.php">Companies</a>
-            <a href="survey.php">Rate Your Employer</a>
+            <a href="index.php" class="link">Home</a>
+            <a href="companies.php" class="link">Companies</a>
+            <a href="survey.php" class="link">Rate Your Employer</a>
             
             
             <div id="container">
