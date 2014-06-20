@@ -11,7 +11,7 @@
     $errorarray = [];
     $errorstring = "";
     $sql = "SELECT * FROM People WHERE email = $_POST['email]";
-    $results = db::execute($sql);
+    $result = db::execute($sql);
     // $result = $db->execute($sql);
     // if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //     //Check email against REGEX
