@@ -1,4 +1,15 @@
-<?php 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>New User</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <?php include 'header.php';?>
+    <h1><?php 
 
 
 
@@ -20,7 +31,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     } else {
         if ($results['email']== $email){
             if (password_verify($_POST['password'], $results['password'])){
-                // print_r($_POST);
                 $_SESSION['user_id'] = $results['person_id'];
                 $_SESSION['email'] = $results['email'];
                 header("Location: account.php?user_id={$_SESSION['user_id']}");
@@ -33,22 +43,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     }
 }
 
-// print_r($error_string);
-?>
+print_r($error_string);
+?></h1>
 
 
-<!DOCTYPE html>
-<html>
-<head>
-    <title>New User</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-</h1>
-
-<body>
-    <?php if(!is_numeric($_SESSION['user_id'])){include 'header.php';}?>
-    <h1>
-
-<?php print_r($error_string);?>
 </body>
 </html>

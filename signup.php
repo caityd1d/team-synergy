@@ -1,8 +1,8 @@
 
 <?php
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 'on');
+    // error_reporting(E_ALL);
+    // ini_set('display_errors', 'on');
 
     include 'initialize.php';
     $db = new DB();
@@ -62,13 +62,16 @@
 
 <body>
     <?php include 'header.php';?>
+
+    <h1>Sign Up for Inside Job</h1>
+
     <form action="signup.php" method="POST">
         <fieldset> 
-            <input type="text" placeholder="First" name="first_name">First Name<p></p>
-            <input type="text" placeholder="Last" name="last_name">Last Name<p></p>
-            <input type="email" placeholder="Email" name="email">Email<p></p>
-            <input type="password" placeholder="Password" name="password">Password<p></p>
-            <input type="password" placeholder="Verify Password" name="verifypassword">Password<p></p>
+            <input type="text" class="signup-box" placeholder="First Name" name="first_name"><br>
+            <input type="text" class="signup-box" placeholder="Last Name" name="last_name"><br>
+            <input type="email" class="signup-box" placeholder="Email Address" name="email"><br>
+            <input type="password" class="signup-box" placeholder="Password" name="password"><br>
+            <input type="password" class="signup-box" placeholder="Verify Password" name="verifypassword"><br><br>
             <button type="submit">Submit</button>
             <button class="cancel">Cancel</button>
             <p><?php foreach ($errorarray as $key) {
