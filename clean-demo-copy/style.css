@@ -1,3 +1,6 @@
+/*Here be dragons! This is the correct stylesheet*/
+
+
 *
 { 
     margin: 0;
@@ -88,7 +91,7 @@ a
     position:relative;
     float:right;
     font-size:12px;
-    margin: 10px 20px 0px 0px;
+    margin: 0px 0px 0px 0px;
 
 }
 
@@ -96,7 +99,6 @@ a
 #loginButton
 { 
     display:inline-block;
-    float:right;
    /* background:#d2e0ea url(login-img/buttonbg.png) repeat-x;*/ 
    background-color: #04033D;
     -moz-border-radius:10px;
@@ -108,11 +110,11 @@ a
 #loginButton span 
 {
     color:#fff; 
-    font-size:1.5em; 
+    font-size:24px; 
     font-weight:bold; 
-    padding:5px 28px 7px 9px;
-    /*background:url(login-img/loginArrow.png) no-repeat 53px 7px;*/
-    display:block;
+
+/*    background:url(login-img/loginArrow.png) no-repeat 53px 7px;
+*/    display:block;
 
 
 
@@ -162,12 +164,11 @@ a
 /* Login Form */
 #loginForm 
 {
-    width:248px; 
+    width:250px; 
     border:1px solid #899caa;
-    border-radius:3px 0 3px 3px;
-    -moz-border-radius:3px 0 3px 3px;
-    margin-top:-1px;
-    background-color: rgba(255,255,255, 0.3);
+    margin-top: 15px;
+    margin-right: -60px;
+    background-color: rgba(4,3,61, 1.5);
     padding:6px;
 }
 
@@ -182,8 +183,6 @@ a
 fieldset#body 
 {
     background-color: rgba(255,255,255, 0.6);
-    border-radius:3px;
-    -moz-border-radius:3px;
     padding:10px 13px;
     margin:0;
 }
@@ -218,8 +217,6 @@ fieldset#body
  {
     width:92%;
     border:1px solid #899caa;
-    border-radius:3px;
-    -moz-border-radius:3px;
     color:#3a454d;
     font-weight:bold;
     padding:8px 8px;
@@ -234,15 +231,31 @@ fieldset#body
 {
     width:auto;
     float:left;
-    background:#339cdf url(login-img/loginbuttonbg.png) repeat-x;
+    background:#04033D;
     color:#fff;
     padding:7px 10px 8px 10px;
-    text-shadow:0px -1px #278db8;
-    border:1px solid #339cdf;
+    -moz-box-shadow:none;
+    -webkit-box-shadow:none;
+    margin:0 12px 0 0;
+    margin-top:5px;
+    cursor:pointer;
+    *padding:7px 2px 8px 2px; /* IE7 Fix */
+}
+
+
+/* Sign Up Button */
+#loginForm #signup 
+{
+    width:auto;
+    float:right;
+    background:#04033D;
+    color:#fff;
+    padding:7px 10px 8px 10px;
     box-shadow:none;
     -moz-box-shadow:none;
     -webkit-box-shadow:none;
     margin:0 12px 0 0;
+    margin-top:5px;
     cursor:pointer;
     *padding:7px 2px 8px 2px; /* IE7 Fix */
 }
@@ -257,9 +270,11 @@ fieldset#body
 
 #loginForm span a 
 {
-    color:#3a454d;
-    text-shadow:1px 1px #fff;
-    font-size:12px;
+  color: #3a454d;
+  font-size: 12px;
+  margin-top: -25px;
+  float: right;
+  margin-right: -15px;
 }
 
 input:focus 
@@ -268,7 +283,6 @@ input:focus
 }
 
 /*-------- End header ----------*/
-
 .main {
     
     padding: 10px;
@@ -294,7 +308,7 @@ nav{
 } 
 
 
-nav .link
+nav a
 { 
     float: left;
     height: 24px;
@@ -307,13 +321,7 @@ nav .link
     text-decoration: none;
 } 
 
-/*nav a:hover;
-{ 
-    color: #000;
-    background: #BDBDBD;
-    background: (#2E2E2E, #848484);
-    text-shadow: none;
-}*/
+
 
 a {
     color: inherit;
@@ -350,7 +358,7 @@ button {
     border-radius: 10px;
 }
 
-.btn {
+.employers-button {
     background-color: #04033D;
     color:#FFF;
     height: 30px;
@@ -358,7 +366,7 @@ button {
     border-radius: 10px;
 }
 
-.rt-btn {
+.employees-button {
     background-color: #04033D;
     color:#FFF;
     height: 30px;
@@ -421,7 +429,7 @@ overflow: hidden;
 }
 
 .prospects:after{
-    content: "";
+  content: "";
   background: url(img/prospects.jpg);
   opacity: 0.5;
   top: 0;
@@ -430,6 +438,12 @@ overflow: hidden;
   right: 0;
   position: absolute;
   z-index: -1;  
+}
+
+.prospects input {
+  height: 25px;
+  font-size: 1em;
+  width: 280px;
 }
 
 .employers
@@ -499,10 +513,9 @@ aside{
 
 .content {
   background-color: #597571;
-  margin: 5px;
+  margin: auto;
   text-align: center;
-  float:right;
-  
+  margin-top: 23px;  
 }
 
 /*.listing div {
@@ -522,6 +535,18 @@ aside{
 }
 
 /*------- End Companies CSS ---------*/
+
+.login input{
+  font-size: 1.125em;
+  width: 300px;
+  margin: 10px;
+}
+
+.login h3 {
+
+  margin-top: 20px;
+
+}
 
 /*Begin Signup Page*/
 
@@ -544,40 +569,28 @@ aside{
 .company-detail .inner {
     
     
-    width: 50%;
-    background-color: 969F85;
+    width: 60%;
+    background-color: #969F85;
     padding: 10px;
     float: left;
     overflow: hidden;
     text-align: left;
+    min-height: 350px;
+
 }
 
-.company-detail .logo{
-  width: 33%;
-  
-}
-
-.company-detail .logo h1{
-  text-align: center;
-  margin: auto;
-}
 
 .company-detail p {
-  float:left;
+  margin: 5px 10px 10px 180px;
+  position: relative;
 }
 
 .company-detail li {
   list-style: none;
   list-style-type: none;
+  font-size: 1.25em;
+  margin: 6px 0 0 15px;
 }
-
-/*.company-detail h1 {
-
-    padding-top: 10px;
-    padding-right: 440px;
-
-}
-*/
 
 
 .company-detail img {
@@ -590,46 +603,111 @@ aside{
 
 }
 
-.company-detail .paragraph {
-
-    margin-left: 120px;
-}
-
-.company-detail .hyperlink {
-
-    text-align: center;
-    margin-top: 10px;
-}
-
-.company-detail .link {
-
-    text-decoration: none;
-    margin-top: 10px;
-
+.company-detail h3{
+  font-size: 1.5em;
+  margin-left: 10px;
 }
 
 .company-detail .ratings {
-  height: auto;
-  background-color: 969F85;
+  height: 350px;
+  width: 35%;
+  background-color: #969F85;
   padding: 10px;
   overflow: hidden;
   text-align: left;
-
   float:left;
   margin-left: 15px;
   list-style-type: none;
 
 }
 
- .reviews{
-  clear:left;
+.ratings table {
+  margin-top: 10px;
 }
 
-h1 button{
+.ratings td {
+  padding-left: 30px;
+  padding-top: 3px;
+  font-size: 1.25em;
+}
+
+ .reviews{
+  clear:left;
+  float:left;
+  margin-top:10px;
+  height: 300px;
+  width: 100%;
+  border: 1px solid #969F85;
+}
+
+.reviews h3 {
+  padding: 10px 0 0 10px;
+  font-size: 1.5em;
+
+}
+
+.reviews h4 {
+  margin-left: 30px;
+}
+
+h1 button.rate{
   margin-left: 10px;
+  position: absolute;
+  margin-top: 8px;
+  font-size: .5em;
+
+}
+
+h3 button.rate{
+  margin-left: 100px;
+  position: absolute;
+  width: auto;
+  font-size: .75em;
+  height: auto;
+  padding: 0 10px;
 }
 
 /*------- End Company Detail CSS ---------*/
+
+
+/*------- Begin Survey CSS ---------*/
+
+.survey fieldset {
+  margin-left: 10px;
+}
+
+.survey legend {
+  font-size: 2em;
+}
+
+.survey select {
+  font-size: 1.25em;
+}
+
+.survey .sliders{
+  margin-top: 20px;
+  margin-left: 20px;
+  font-size: 1.125em;
+}
+
+.survey label {
+  margin-left:5px;
+}
+
+.survey input {
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+.survey textarea {
+  font-size: 1.125em;
+  width: 400px;
+  height: 200px;
+  margin-bottom: 15px;
+
+}
+
+/*------- End Survey CSS ---------*/
 
 
 /*----------Slider CSS Below------------------*/

@@ -8,11 +8,10 @@
 </head>
 
 <body>
-    <?php include 'header.php';?>
-    <h1><?php 
+    <?php include 'header.php'; ?>
+    <h1>
 
-
-
+    <?php 
 include 'initialize.php';
 
 $db = new DB;
@@ -27,7 +26,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST'){
     $results_ok = $results->num_rows;
     $results = $results ->fetch_assoc();
     if ($results_ok == 0){
-        $error_string = "Please create an account. Your email was not found, or you type poorly. Do better.";
+        $error_string = "Please create an account. Your email was not found or you type poorly. Do better.";
     } else {
         if ($results['email']== $email){
             if (password_verify($_POST['password'], $results['password'])){

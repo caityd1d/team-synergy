@@ -24,7 +24,7 @@
 
             $sql_values = $_POST;
             $sql_values['password'] = password_hash($sql_values['password'], PASSWORD_DEFAULT);
-            print_r($sql_values);
+            // print_r($sql_values);
             $table = "People"; 
             $db->insert($table, $sql_values);
         }

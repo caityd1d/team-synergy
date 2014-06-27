@@ -56,21 +56,21 @@ include 'initialize.php';
               <div class="prospects">
                 <h2>Prospects</h2>
                 <form action="companies.php" method="GET">
-                  <input type="text" name="search" placeholder="Find a company rating" size="40"><br>
-                  <button type="submit">Submit</button>
+                  <input type="text" name="search" placeholder="Find a company rating" size="40">
+                  <!-- <button type="submit">Submit</button> -->
                 </form>
                 
               </div>
             
               <div class="employers">
                 <h2>Employers</h2>
-                <button class="rt-btn" onclick="window.location.href='companies.php'">See your ratings</button>
+                <button class="employers-button" onclick="window.location.href='companies.php'">See your ratings</button>
                 
               </div>
             
               <div class="employees">
                 <h2>Employee</h2>
-                <button class="btn" onclick="window.location.href='survey.php'">Rate a company</button>
+                <button class="employees-button" onclick="window.location.href='survey.php'">Rate a company</button>
                 </div>
 
   </div>

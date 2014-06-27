@@ -50,10 +50,12 @@ while($row = $results->fetch_assoc()){
 </head>
 <body>
     <?php include 'header.php';?>
-     <form action="companies.php" method="GET">
-        <input type="text" name="search" placeholder="Find a company rating" size="75">
-        <button type="submit">Submit</button>
-    </form>
+     <div class="top-form">
+        <form action="companies.php" method="GET">
+          <input type="text" name="search" class="top-box" placeholder="Find a company rating" size="80">
+          <button type="submit">Submit</button>
+        </form>
+    </div>
    
     <div class="companies">
         <ul class="listing"></ul>

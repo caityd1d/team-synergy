@@ -1,8 +1,8 @@
 <!-- put in the images you lazy bastards -->
 <?php
 
-    error_reporting(E_ALL);
-    ini_set('display_errors', 'on');
+    // error_reporting(E_ALL);
+    // ini_set('display_errors', 'on');
 
     include_once('db.php');
     include('newaverages.php');
@@ -37,15 +37,25 @@
 
 <?php include 'header.php';?>
 
-<h1><?php echo $company_info['Name']; ?> <button onclick="window.location.href='survey.php'">Rate!</button></h1>
-	
-<div class="company-detail">        
-	<div class="inner">
+<div class="top-form">
+<form action="companies.php" method="GET">
+  <input type="text" name="search" class="top-box" placeholder="Find a company rating" size="80">
+  <button type="submit">Submit</button>
+</form>
+</div>
 
-        <div class="logo">
+<h1><?php echo $company_info['Name']; ?> <button class="rate" onclick="window.location.href='survey.php'">Rate!</button></h1>   
+    
+<div class="company-detail">        
+    <div class="inner">
+
+        
         <h3><?php echo $company_info['Industry']; ?></h3>
+       
+        <hr>
+
         <img src="<?php echo $company_info['Logo']; ?>">
-        </div>
+
 
         <p><?php echo $company_info['Description']; ?></p>
 
@@ -58,31 +68,61 @@
 
     <div class="ratings">
         <h3>Overall Company Rating</h3>
+        <hr>
 
-        <ul class="rating1">
-            <li>Work/Life Balance: <?php echo $averages['WLBalance']; ?></li>
-            <li>Salary: <?php echo $averages['Salary']; ?></li>
-            <li>Benefits: <?php echo $averages['Benefits']; ?></li>
-        </ul>
+        <table>
+            <tr>
+                <td>Work/Life Balance:</td> <td><?php echo $averages['WLBalance']; ?></td>
+            </tr>
 
-        <ul class="rating2">
-            <li>Opportunity for Advancement: <?php echo $averages['Opportunity']; ?></li>
-            <li>Equality/Fairness: <?php echo $averages['Fairness']; ?></li>
-            <li>Leadership: <?php echo $averages['Leadership']; ?></li>
-        </ul>
+            <tr>
+                <td>Salary:</td> <td><?php echo $averages['Salary']; ?></td>
+            </tr>
 
-        <ul class="rating3">
-            <li>Loyalty: <?php echo $averages['Loyalty']; ?></li>
-            <li>Morale: <?php echo $averages['Morale']; ?></li>
-            <li>Communication: <?php echo $averages['Communication']; ?></li>
-        </ul>
+            <tr>
+                <td>Benefits:</td> <td><?php echo $averages['Benefits']; ?></td>
+            </tr>
+
+            <tr>
+                <td>Opportunity for Advancement:</td> <td><?php echo $averages['Opportunity']; ?></td>
+            </tr>
+
+            <tr>
+                <td>Equality/Fairness:</td> <td><?php echo $averages['Fairness']; ?></td>
+            </tr>
+
+            <tr>
+                <td>Leadership:</td> <td><?php echo $averages['Leadership']; ?></td>
+            </tr>
+
+            <tr>
+                <td>Loyalty:</td> <td><?php echo $averages['Loyalty']; ?></td>
+            </tr>
+
+            <tr>
+                <td>Morale:</td> <td><?php echo $averages['Morale']; ?></td>
+            </tr>
+
+            <tr>
+                <td>Communication:</td> <td><?php echo $averages['Communication']; ?></td>
+            </tr>
+
+        </table>
+
 
     </div>
 
 </div>
 
 <div class="reviews">
-    <h3>What Users Have to Say About <?php echo $company_info['Name']; ?></h3>
+    <h3>What Users Have to Say About <?php echo $company_info['Name']; ?> 
+        <button class="rate" onclick="window.location.href='survey.php'">Rate <?php echo $company_info['Name']; ?></button>
+    </h3>
+
+    <div>
+    
+    </div>
+    
 </div>
 
 </body>

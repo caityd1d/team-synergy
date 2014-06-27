@@ -14,13 +14,14 @@ if ($_SESSION['user_id']){
   </head>
   <body>
     <?php include 'header.php';?>
-    <h3>Please log in to continue</h3>
-    <form action = "verify.php" method = "POST">  <br>
-        Email <input type = "text" name = "email"><br><br>
-        Password <input type = "password" name = "password"><br><br>
-        <button type = "submit">Submit</button>
-    </form>
-<br><br>
+    <h1>Please log in to continue</h1>
+    <div class="login">
+      <form action = "verify.php" method = "POST">  
+          <input type = "text" name = "email" placeholder="Email Address"><br>
+          <input type = "password" name = "password" placeholder="Password"><br>
+          <button type = "submit">Submit</button>
+      </form> 
+    </div> <br><br>
     <h3>New user? <button onclick="window.location.href='signup.php'">Sign up!</button></h3>
   
 
